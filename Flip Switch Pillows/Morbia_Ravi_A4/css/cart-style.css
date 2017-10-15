@@ -1,0 +1,42 @@
+@charset "UTF-8";
+/* CSS Document */
+
+.page-title {
+	margin-bottom: 20px;
+	font-weight: 700;
+}
+
+.table-titles {
+	position: relative;
+	border-bottom: 1px solid #8A8A8A;
+	width: 900px;
+	height: 30px;
+	
+}
+
+.col-title {
+	color: #8A8A8A;
+	line-height: 20px;
+	font-weight: 400;
+	display: inline-block;
+	position: absolute;
+	margin-bottom: 10px;
+}
+
+.pos-1 {left: 100px;}
+.pos-2 {left: 400px;}
+.pos-3 {left: 600px;}
+.pos-4 {left: 800px;}
+
+.item-container {
+	padding: 20px 0;
+}
+
+.item-container * {
+	display: inline-block;
+}
+
+.product-type, .product-shape {
+	font-weight: 400;
+	font-size: 14px;
+}
