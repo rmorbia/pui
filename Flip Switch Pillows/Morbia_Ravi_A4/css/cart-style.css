@@ -29,15 +29,15 @@
 .pos-4 {left: 800px;}
 
 .item-container {
+	width: 900px;
 	padding: 20px 0;
+	position: relative;
+	border-bottom: 1px solid #E5E5E5;
+	box-sizing: border-box;
 }
 
 .item-container * {
 	display: inline-block;
-}
-
-.product-details {
-	
 }
 
 .product-type, .product-shape {
@@ -51,27 +51,18 @@
 	left: 100px;
 }
 
-.product-name {
-	display: inline-block;
-	
-}
-
-.product-type {
-	
-}
-
-.product-shape {
-	
-}
-
 .price {
 	position: absolute;
 	left: 400px;
 }
 
-.quantity {
+.quant-del {
 	position: absolute;
 	left: 600px;
+}
+
+.delete {
+	color: #442A04;
 }
 
 .subtotal {
