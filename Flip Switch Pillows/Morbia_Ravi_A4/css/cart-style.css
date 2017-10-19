@@ -36,7 +36,46 @@
 	display: inline-block;
 }
 
+.product-details {
+	
+}
+
 .product-type, .product-shape {
 	font-weight: 400;
 	font-size: 14px;
 }
+
+.product {
+	display: inline-block;
+	position: absolute;
+	left: 100px;
+}
+
+.product-name {
+	display: inline-block;
+	
+}
+
+.product-type {
+	
+}
+
+.product-shape {
+	
+}
+
+.price {
+	position: absolute;
+	left: 400px;
+}
+
+.quantity {
+	position: absolute;
+	left: 600px;
+}
+
+.subtotal {
+	position: absolute;
+	left: 800px;
+}
+
