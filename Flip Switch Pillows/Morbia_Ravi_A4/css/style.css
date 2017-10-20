@@ -36,6 +36,8 @@ a:visited {color: #2c2c2c;}
 a:hover {color: #52D10E;}
 a:active {color: #45B20B;}
 
+select {padding: 10px; margin-top: 10px;}
+
 .icon {
 	font-family: FontAwesome;
 }

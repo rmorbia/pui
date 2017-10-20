@@ -3,10 +3,10 @@
 <head>
 <meta charset="UTF-8">
 <title>FlipSwitchPillows</title>
-<link rel="stylesheet" href="/Users/rpm2011/Desktop/PUI/Sketch Plugins/Icon Sets/font-awesome-4.7.0/css/font-awesome.min.css">
 <link rel="stylesheet" type="text/css" href="css/style.css">
 <link rel="stylesheet" type="text/css" href="css/products-style.css">
 <link rel="stylesheet" type="text/css" href="css/details-style.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="js/product.js"></script>
 </head>
 
@@ -15,7 +15,7 @@
   <!--Header-->
   <header>
     <div class="top-bar">
-      <div class="nav-bar"> 
+      <div class="nav-bar">
         <!--Logo-->
         <div class="grid-3"> <a class="nav-link" href="index.html">
           <h4 class="logo"><span style="color: #52D10E">Flip</span> <span style="color: #442A04">Switch</span> <span style="color: #52D10E">Pillows</span></h4>
@@ -23,8 +23,6 @@
         <!--Search Bar-->
         <div class="grid-3 correct-vert">
           <input type="text" placeholder="Search..." class="search">
-          <!--Could not get icon to show in browser
-						<i class="fa fa-search search-icon"></i>--> 
         </div>
         <!--Navigation Links-->
         <div class="grid-3">
@@ -42,32 +40,55 @@
   <!--Section - Product Details--> 
   <!--Photos-->
   <div class="content-wrapper">
-    <div class="photos-container"> <img src="img/details/main-product.png">
+    <div class="photos-container"> <img id="main-photo" src="img/details/main-product-couch.png">
+      <img id="shape-img" src="img/details/shapes-round.png" width="auto" height="60">
       <div class="product-images"> <img class="unselected-img" src="img/details/product-view1.png"> <img class="selected-img" src="img/details/product-view2.png"> <img class="unselected-img" src="img/details/product-view3.png"> <img class="unselected-img" src="img/details/product-view4.png"> </div>
     </div>
     
     <!--Text and Buttons-->
     <div class="text-container">
-      <h2 class="product-name">Red Velvet</h2>
-      <h5 class="product-type">Couch Pillow | Round</h5>
-      <h5 class="product-rating">4/5 Stars&ensp;<span class="num-ratings">(135)</span></h5>
-      <h3 class="product-price">$34<sup>99</sup></h3>
+      <h2 id="product-name">Red Velvet</h2>
+      <h5 id="product-type" class="inline">Couch Pillow</h5><h5 class="inline">&nbsp;|&nbsp;</h5><h5 id="product-shape" class="inline">Round</h5>
+      <h5 id="product-rating">4/5 Stars&ensp;<span class="num-ratings">(135)</span></h5>
+      <h3 id="product-price">$34<sup>99</sup></h3>
       <div class="btn">
-        <button class="add-cart-btn first-btn">Add to Cart</button>
+        <button class="add-cart-btn first-btn" onclick="saveItem()">Add to Cart</button>
+		<select id="quantity">
+			<option value="1"><p>1</p></option>
+			<option value="2"><p>2</p></option>
+			<option value="3"><p>3</p></option>
+			<option value="4"><p>4</p></option>
+			<option value="1"><p>5</p></option>
+			<option value="2"><p>6</p></option>
+			<option value="3"><p>7</p></option>
+			<option value="8"><p>8</p></option>
+			<option value="9"><p>9</p></option>
+			<option value="10"><p>10</p></option>
+		</select>
       </div>
       <p class="product-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum vitae rhoncus dolor. Vestibulum sed aliquam purus, eget rhoncus libero. Pellentesque eu nunc eu tortor ultricies molestie.</p>
-      <!--Types-->
+      <!-- Options Types -->
       <div class="product-options">
         <h5 class="section-title">TYPES</h5>
-        <input type="radio" id="couch-radio" name="type" value="couch"> <p id="couch" class="type">Couch</p>
-        <input type="radio" id="bed-radio" name="type" value="bed"> <p id="bed" class="type">Bed</p>
-        <input type="radio" id="round-radio" name="type" value="round"> <p id="round" class="type">Round</p>
-        <input type="radio" id="floor-radio" name="type" value="floor"> <p id="floor" class="type">Floor Pouf</p>
+        <select id="type-select" onchange="setType()">
+			<option value="Couch Pillow"><p>Couch</p></option>
+			<option value="Bed Pillow"><p>Bed</p></option>
+			<option value="Round Pillow"><p>Round</p></option>
+			<option value="Floor Pouf Pillow"><p>Floor Pouf</p></option>
+		</select>
       </div>
-      <!--Shapes-->
+      <!-- Options Shapes -->
       <div class="product-options">
         <h5 class="section-title">SHAPES</h5>
-        <div class="shape-box"> <img src="img/details/shapes-square.png" width="auto" height="60">
+        <select id="shape-select" onchange="setShape()">
+			<option value="Square"><p>Square</p></option>
+			<option value="Round" selected><p>Round</p></option>
+			<option value="Dog"><p>Dog</p></option>
+			<option value="Bear"><p>Bear</p></option>
+			<option value="Bunny"><p>Bunny</p></option>
+			<option value="Cat"><p>Cat</p></option>
+		</select>
+        <!--<div class="shape-box"> <img src="img/details/shapes-square.png" width="auto" height="60">
           <p>Square</p>
           <input type="radio" name="shape" value="square">
         </div>
@@ -90,12 +111,12 @@
         <div class="shape-box"> <img src="img/details/shapes-cat.png" width="auto" height="60">
           <p>Cat</p>
           <input type="radio" name="shape" value="cat">
-        </div>
+        </div>-->
       </div>
       <h5 class="field-tltle custom-request">Customization Requests</h5>
       <textarea rows="6" cols="60"></textarea>
       <div class="btn">
-        <button class="add-cart-btn first-btn">Add to Cart</button>
+        <button class="add-cart-btn first-btn" onclick="saveItem()">Add to Cart</button>
       </div>
     </div>
   </div>

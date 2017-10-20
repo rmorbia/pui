@@ -1,8 +1,3 @@
-
-          <input type="radio" name="shape" value="square">
-          <input type="radio" name="shape" value="square">
-          <input type="radio" name="shape" value="square">
-          <input type="radio" name="shape" value="square">@charset "UTF-8";
 /* CSS Document */
 
 /*Product Details*/
@@ -23,12 +18,17 @@
 	display: inline-block;
 	vertical-align: top;
 	box-sizing: border-box;
+	position: relative;
 }
 
 .text-container {
 	padding-left: 20px;
 	box-sizing: border-box;
-	width: 600px;
+	width: 500px;
+}
+
+.inline {
+	display: inline-block;
 }
 
 /*Product Photos*/
@@ -45,6 +45,15 @@
 	margin: 0 1px;
 }
 
+#shape-img {
+	position: absolute;
+	top: 230px;
+	left: 320px;
+	padding: 5px;
+	background: rgba(255,255,255,0.6);
+	border-top-left-radius: 30px;
+}
+
 .type {
 	font-weight: 300;
 	padding: 8px 20px;
@@ -57,6 +66,7 @@
 
 .selected-type {
 	border: 3px solid #442A04;
+	box-sizing: border-box;
 	color: #442A04;
 	font-weight: 700;
 }
@@ -90,16 +100,16 @@
 
 
 /*Product Specifications*/
-.product-name {
+#product-name {
 	color: #442A04;
 }
 
-.product-type {
+#product-type, #product-shape {
 	font-size: 18px;
 	font-weight: 300;
 }
 
-.product-rating {
+#product-rating {
 	color: #8a8a8a;
 	margin-top: 4px;
 }
@@ -108,12 +118,14 @@
 	font-weight: 300;
 }
 
-.product-price {
+#product-price {
 	font-family: "Source Sans Pro";
 	font-weight: 400;
 	margin-top: 15px;
 }
-
+.btn {
+	width: 300px;
+}
 .add-cart-btn {
 	background-color: #52D10E;
 	color: inherit;
@@ -124,10 +136,15 @@
 	margin-top: -10px;
 }
 
+#quantity {
+	margin: 0;
+	margin-top: -6px;
+}
+
 .product-desc {
-	color: #8a8a8a;
+	color: #2d2d2d;
 	font-weight: 300;
-	margin-top: 70px;
+	margin-top: 30px;
 }
 
 .product-options {
@@ -139,8 +156,8 @@
 }
 
 textarea {
-	min-width: 380px;
-	max-width: 380px;
+	min-width: 450px;
+	max-width: 450px;
 	min-height: 80px;
 }
 
