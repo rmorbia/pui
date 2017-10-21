@@ -34,10 +34,27 @@
 	position: relative;
 	border-bottom: 1px solid #E5E5E5;
 	box-sizing: border-box;
+	display: none;
+}
+
+.no-items {
+	width: 900px;
+	box-sizing: border-box;
+	color: #8a8a8a;
+	text-align: center;
+	padding: 100px;
 }
 
 .item-container * {
 	display: inline-block;
+}
+
+.item-shape {
+	position: relative;
+	left: -35px;
+	background: rgba(255,255,255,0.6);
+	border-top-left-radius: 15px;
+	padding: 2px;
 }
 
 .product-type, .product-shape {

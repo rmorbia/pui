@@ -29,7 +29,7 @@
           <nav>
             <div class="link-box"> <a class="nav-link" href="products.html">Products</a> </div>
             <div class="link-box"> <a class="nav-link" href="">Customize Your Own</a> </div>
-            <div class="link-box"> <a class="nav-link" href="cart.html">Cart</a> </div>
+            <div class="link-box"> <a id="nav-cart" class="nav-link" href="cart.html">Cart (0)</a> </div>
           </nav>
         </div>
       </div>
@@ -50,7 +50,7 @@
       <h2 id="product-name">Red Velvet</h2>
       <h5 id="product-type" class="inline">Couch Pillow</h5><h5 class="inline">&nbsp;|&nbsp;</h5><h5 id="product-shape" class="inline">Round</h5>
       <h5 id="product-rating">4/5 Stars&ensp;<span class="num-ratings">(135)</span></h5>
-      <h3 id="product-price">$34<sup>99</sup></h3>
+      <h3 id="product-price">$39<sup>99</sup></h3>
       <div class="btn">
         <button class="add-cart-btn first-btn" onclick="saveItem()">Add to Cart</button>
 		<select id="quantity">
@@ -88,30 +88,6 @@
 			<option value="Bunny"><p>Bunny</p></option>
 			<option value="Cat"><p>Cat</p></option>
 		</select>
-        <!--<div class="shape-box"> <img src="img/details/shapes-square.png" width="auto" height="60">
-          <p>Square</p>
-          <input type="radio" name="shape" value="square">
-        </div>
-        <div class="shape-box selected-shape"> <img src="img/details/shapes-round.png" width="auto" height="60">
-          <p>Round</p>
-          <input type="radio" name="shape" value="round" checked>
-        </div>
-        <div class="shape-box"> <img src="img/details/shapes-dog.png" width="auto" height="60">
-          <p>Dog</p>
-          <input type="radio" name="shape" value="dog">
-        </div>
-        <div class="shape-box"> <img src="img/details/shapes-bear.png" width="auto" height="60">
-          <p>Bear</p>
-          <input type="radio" name="shape" value="bear">
-        </div>
-        <div class="shape-box"> <img src="img/details/shapes-bunny.png" width="auto" height="60">
-          <p>Bunny</p>
-          <input type="radio" name="shape" value="bunny">
-        </div>
-        <div class="shape-box"> <img src="img/details/shapes-cat.png" width="auto" height="60">
-          <p>Cat</p>
-          <input type="radio" name="shape" value="cat">
-        </div>-->
       </div>
       <h5 class="field-tltle custom-request">Customization Requests</h5>
       <textarea rows="6" cols="60"></textarea>
@@ -119,6 +95,10 @@
         <button class="add-cart-btn first-btn" onclick="saveItem()">Add to Cart</button>
       </div>
     </div>
+	<div id="item-confirmation">
+	  <h4>Your item has been added to the cart!</h4> <br>
+	  <p>You currently have <span id="#-of-itmes">#-of-items</span> in your cart</p>
+	</div>
   </div>
   <!--Section - Footer-->
   <footer>
