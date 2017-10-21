@@ -1,14 +1,19 @@
 // JavaScript Document
 
 window.onload = function() {
-	if (localStorage.length == 1) {
-		document.getElementById("nav-cart").innerHTML = "Cart (1)";
-		console.log("There is 1 item in lS.");
-	} else {
-		document.getElementById("#-of-items").innerHTML = "Cart (" + localStorage.length + ")";
-		console.log("There are " + localStorage.length + " items in lS.");
+	document.getElementById("nav-cart").innerHTML = "Cart (" + (JSON.parse(localStorage.getItem("savePillow"))).length + ")";
+	
+	var cart = JSON.parse(localStorage.getItem("savePillow"));
+	
+	for(var i=0; i<cart.length; i++) {
+	  var name = JSON.parse(localStorage.savePillow)[i].name;
+	  var type = JSON.parse(localStorage.savePillow)[i].type;
+	  var shape = JSON.parse(localStorage.savePillow)[i].shape;
+	  var typeImage = JSON.parse(localStorage.savePillow)[i].typeImage;
+	  var price = JSON.parse(localStorage.savePillow)[i].price;
+	  
+	  console.log(name, type, shape, typeImage, price);
+	  document.getElementById("local-storage").appendChild= name + type + shape + typeImage + price + "<br>";
 	}
 	
-	var newPillow = JSON.parse(localStorage.getItem("savePillow"));
-	//if (localStorage.getItem("savePillow"))
 };

@@ -3,7 +3,6 @@
 <head>
 <meta charset="UTF-8">
 <title>FlipSwitchPillows</title>
-<link rel="stylesheet" href="/Users/rpm2011/Desktop/PUI/Sketch Plugins/Icon Sets/font-awesome-4.7.0/css/font-awesome.min.css">
 <link rel="stylesheet" type="text/css" href="css/style.css">
 <link rel="stylesheet" type="text/css" href="css/products-style.css">
 <link rel="stylesheet" type="text/css" href="css/details-style.css">
@@ -49,24 +48,33 @@
     </div>
     
     <!--Items-->
-	<h4 class="no-items">There are no items in your cart.</h4>
-    <div class="item-container"> 
-     <img src="img/details/main-product-.png" width="auto" height="60"> <img class="item-shape" src="img/details/shapes-.png" width="auto" height="30">
-      <div class="product">
-        <h4 class="product-name">Name of Pillow</h4>
-        <br />
-        <p class="product-type">Type of Pillow</p>
-        <p class="product-shape"> | Shape</p>
-      </div>
-      <h4 class="price">$##<sup>99</sup></h4>
-      <div class="quant-del">
-        <h4 class="quantity">x#</h4>
-        <br />
-        <p class="delete">Delete</p>
-      </div>
-      <h4 class="subtotal">$##<sup>##</sup></h4>
-    </div>
+	<h4 class="no-items">There are no items in the cart.</h4>
+    
+    <!--Print out Local Storage-->
+	<p id="local-storage"></p>
+   
+    <!--Item Template-->
+    <div id="cart-contents">
+		<div class="item-container"> 
+		 <img src="" width="auto" height="60">
+		 <img class="item-shape" src="" width="auto" height="30">
+		  <div class="product">
+			<h4 class="product-name">Name of Pillow</h4>
+			<br />
+			<p class="product-type">Type of Pillow</p>
+			<p class="product-shape"> | Shape</p>
+		  </div>
+		  <h4 class="price">$##<sup>99</sup></h4>
+		  <div class="quant-del">
+			<h4 class="quantity">x#</h4>
+			<br />
+			<p class="delete">Delete</p>
+		  </div>
+		  <h4 class="subtotal">$##<sup>##</sup></h4>
+		</div>
+	</div>
   </div>
+  
   <!--Section - Footer-->
   <footer>
     <div>

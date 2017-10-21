@@ -1,5 +1,9 @@
 // JavaScript Document
 
+window.onload = function() {
+	document.getElementById("nav-cart").innerHTML = "Cart (" + (JSON.parse(localStorage.getItem("savePillow"))).length + ")";
+};
+
 /*** Object Constructors ***/
 
 function Pillow(name, type, shape, typeImage, price, quantity) {
@@ -10,11 +14,8 @@ function Pillow(name, type, shape, typeImage, price, quantity) {
 	this.price = price;
 	this.qantity = quantity;
 }
-
+	
 /*** Functions ***/
-
-
-// Change Type Image
 function setType() {
 	var pillowType = document.getElementById("type-select").value;
 	document.getElementById("product-type").innerHTML = pillowType;
@@ -53,6 +54,7 @@ function setShape() {
 	}
 }
 
+/*** Local Storage ***/
 function saveItem() {
 	var itemName = document.getElementById("product-name").innerHTML;
 	var itemType = document.getElementById("type-select").value;
@@ -62,28 +64,12 @@ function saveItem() {
 	var itemQuantity = document.getElementById("quantity").value;
 	console.log(itemName, itemType, itemShape, itemImage, itemPrice, itemQuantity);
 
+	var cartArray = JSON.parse(localStorage.getItem("savePillow")) || [];
 	var pillowToAdd = new Pillow(itemName, itemType, itemShape, itemImage, itemPrice, itemQuantity);
-	localStorage.setItem("savePillow", JSON.stringify(pillowToAdd));
-	
-	document.getElementById("item-confirmation").style.display = "inline-block";
-	if (localStorage.getItem("savePillow") === null) {
-		document.getElementById("#-of-items").innerHTML = "Cart (0)";
-		console.log("There are no items in lS.");
-	} else if (localStorage.length == 1) {
-		document.getElementById("nav-cart").innerHTML = "Cart (1)";
-		console.log("There is 1 item in lS.");
-	} else {
-		document.getElementById("#-of-items").innerHTML = "Cart (" + localStorage.length + ")";
-		console.log("There are " + localStorage.length + " item in lS.");
-	}
-
-	if (localStorage.getItem("savePillow") === null) {
-		console.log("There is no item.");
-	} else {
-		console.log("Yay!");
-		console.log(localStorage.getItem("savePillow"));
-	}
-	//var pillowToAdd = new Pillow(itemName, itemType, itemShape, itemImage, itemPrice);
+console.log(cartArray);
+	cartArray.push(pillowToAdd);
+	localStorage.setItem("savePillow", JSON.stringify(cartArray));
+console.log((JSON.parse(localStorage.getItem("savePillow")) || []).length + " item(s) in local storage.");
+	// Update Cart in Nav
+	document.getElementById("nav-cart").innerHTML = "Cart (" + (JSON.parse(localStorage.getItem("savePillow"))).length + ")";
 }
-
-//})
