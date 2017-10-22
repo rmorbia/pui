@@ -1,7 +1,11 @@
 // JavaScript Document
 
 window.onload = function() {
+	if (JSON.parse(localStorage.getItem("savePillow")) == null) {
+		document.getElementById("nav-cart").innerHTML = "Cart (0)";
+	} else {
 	document.getElementById("nav-cart").innerHTML = "Cart (" + (JSON.parse(localStorage.getItem("savePillow"))).length + ")";
+	}
 };
 
 /*** Object Constructors ***/
