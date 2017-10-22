@@ -70,6 +70,8 @@ console.log(cartArray);
 	cartArray.push(pillowToAdd);
 	localStorage.setItem("savePillow", JSON.stringify(cartArray));
 console.log((JSON.parse(localStorage.getItem("savePillow")) || []).length + " item(s) in local storage.");
+	
 	// Update Cart in Nav
+	// Need to figure out what to do when there is nothing in local storage!!!!!!!!!!!
 	document.getElementById("nav-cart").innerHTML = "Cart (" + (JSON.parse(localStorage.getItem("savePillow"))).length + ")";
 }

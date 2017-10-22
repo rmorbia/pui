@@ -29,24 +29,20 @@
 .pos-4 {left: 800px;}
 
 .item-container {
+	display: block;
 	width: 900px;
 	padding: 20px 0;
 	position: relative;
 	border-bottom: 1px solid #E5E5E5;
 	box-sizing: border-box;
-	display: none;
-}
-
-.no-items {
-	width: 900px;
-	box-sizing: border-box;
-	color: #8a8a8a;
-	text-align: center;
-	padding: 100px;
 }
 
 .item-container * {
 	display: inline-block;
+}
+
+.hidden {
+	display: none;
 }
 
 .item-shape {
@@ -55,6 +51,15 @@
 	background: rgba(255,255,255,0.6);
 	border-top-left-radius: 15px;
 	padding: 2px;
+}
+
+.no-items {
+	display: none;
+	width: 900px;
+	box-sizing: border-box;
+	color: #8a8a8a;
+	text-align: center;
+	padding: 100px;
 }
 
 .product-type, .product-shape {
