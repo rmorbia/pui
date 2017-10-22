@@ -83,8 +83,12 @@
 	left: 600px;
 }
 
-.delete {
+.remove {
 	color: #442A04;
+}
+
+.a-link .remove:hover {
+	text-decoration: underline;
 }
 
 .subtotal {

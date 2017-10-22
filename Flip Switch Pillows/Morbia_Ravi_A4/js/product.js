@@ -6,13 +6,15 @@ window.onload = function() {
 
 /*** Object Constructors ***/
 
-function Pillow(name, type, shape, typeImage, price, quantity) {
+function Pillow(name, type, shape, typeImage, shapeImage, price, quantity, subtotal) {
 	this.name = name;
 	this.type = type;
 	this.shape = shape;
 	this.typeImage = typeImage;
+	this.shapeImage = shapeImage;
 	this.price = price;
-	this.qantity = quantity;
+	this.quantity = quantity;
+	this.subtotal = subtotal;
 }
 	
 /*** Functions ***/
@@ -21,16 +23,16 @@ function setType() {
 	document.getElementById("product-type").innerHTML = pillowType;
 	if (pillowType == "Couch Pillow") {
 		document.getElementById("main-photo").src = "img/details/main-product-couch.png";
-		document.getElementById("product-price").innerHTML = "$39<sup>99</sup>";
+		document.getElementById("product-price").innerHTML = "$40";
 	} else if (pillowType == "Bed Pillow") {
 		document.getElementById("main-photo").src = "img/details/main-product-bed.jpg";
-		document.getElementById("product-price").innerHTML = "$29<sup>99</sup>";
+		document.getElementById("product-price").innerHTML = "$30";
 	} else if (pillowType == "Round Pillow") {
 		document.getElementById("main-photo").src = "img/details/main-product-round.jpg";
-		document.getElementById("product-price").innerHTML = "$34<sup>99</sup>";
+		document.getElementById("product-price").innerHTML = "$35";
 	} else {
 		document.getElementById("main-photo").src = "img/details/main-product-floor.jpg";
-		document.getElementById("product-price").innerHTML = "$49<sup>99</sup>";
+		document.getElementById("product-price").innerHTML = "$50";
 	}
 }
 
@@ -56,16 +58,20 @@ function setShape() {
 
 /*** Local Storage ***/
 function saveItem() {
-	var itemName = document.getElementById("product-name").innerHTML;
-	var itemType = document.getElementById("type-select").value;
-	var itemShape = document.getElementById("shape-select").value;
-	var itemImage = document.getElementById("main-photo").src;
-	var itemPrice = document.getElementById("product-price").innerHTML;
-	var itemQuantity = document.getElementById("quantity").value;
-	console.log(itemName, itemType, itemShape, itemImage, itemPrice, itemQuantity);
+	var name = document.getElementById("product-name").innerHTML;
+	var type = document.getElementById("type-select").value;
+	var shape = document.getElementById("shape-select").value;
+	var typeImage = document.getElementById("main-photo").getAttribute("src");
+	var shapeImage = document.getElementById("shape-img").getAttribute("src");
+	var price = document.getElementById("product-price").innerHTML;
+	var quantity = document.getElementById("quantity").value;
+	var subtotal = Number(price.substring(1,price.length)) * quantity;
+	console.log(price.substring(1,price.length));
+	console.log(quantity);
+	console.log(subtotal);
 
 	var cartArray = JSON.parse(localStorage.getItem("savePillow")) || [];
-	var pillowToAdd = new Pillow(itemName, itemType, itemShape, itemImage, itemPrice, itemQuantity);
+	var pillowToAdd = new Pillow(name, type, shape, typeImage, shapeImage, price, quantity, subtotal);
 console.log(cartArray);
 	cartArray.push(pillowToAdd);
 	localStorage.setItem("savePillow", JSON.stringify(cartArray));
