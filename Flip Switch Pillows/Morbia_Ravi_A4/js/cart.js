@@ -1,6 +1,6 @@
 // JavaScript Document
 
-window.onload = function () {
+$(document).ready ( function () {
 	// Update Cart # in Nav
 	if (JSON.parse(localStorage.getItem("savePillow")) == null) {
 		document.getElementById("nav-cart").innerHTML = "Cart (0)";
@@ -37,14 +37,25 @@ window.onload = function () {
 			document.getElementById("item" + String(i)).childNodes[0].getElementsByClassName("subtotal")[0].innerHTML = "$" + subtotal;
 		}
 	}
+	
+	$(".a-link").click(function() {
+		$(this).closest(".item-container").remove();
+		console.log($(this));
+	})
 
-};
 
+<<<<<<< HEAD
 //$(document).ready(function () {
 
 	function removeItem() {
 		$(this).parent().remove();
 		console.log($(this).parent());
 	}
+=======
+
+//$(document).ready(function () {
+
+	
+>>>>>>> 6c26040dbc77f022f0a6af2685a243b252771644
 
 //});
