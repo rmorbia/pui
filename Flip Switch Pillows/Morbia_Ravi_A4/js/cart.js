@@ -6,9 +6,10 @@ $(document).ready ( function () {
 		document.getElementById("nav-cart").innerHTML = "Cart (0)";
 	} else {
 		document.getElementById("nav-cart").innerHTML = "Cart (" + (JSON.parse(localStorage.getItem("savePillow"))).length + ")";
-		var cart = JSON.parse(localStorage.getItem("savePillow"));
-
-		for (var i = 0; i < cart.length; i++) {
+		
+		// Get items from local storage
+		var cartArray = JSON.parse(localStorage.getItem("savePillow"));
+		for (var i = 0; i < cartArray.length; i++) {
 			// Parse localStorage to get item attributes.
 			var name = JSON.parse(localStorage.savePillow)[i].name;
 			var type = JSON.parse(localStorage.savePillow)[i].type;
@@ -26,7 +27,7 @@ $(document).ready ( function () {
 			newDiv.innerHTML = newItemHtml;
 			document.getElementById("cart-contents").appendChild(newDiv);
 
-			// Insert localStorage data into new item.
+			// Insert localStorage data into each new item.
 			document.getElementById("item" + String(i)).childNodes[0].getElementsByClassName("item-type")[0].src = typeImage;
 			document.getElementById("item" + String(i)).childNodes[0].getElementsByClassName("item-shape")[0].src = shapeImage;
 			document.getElementById("item" + String(i)).childNodes[0].getElementsByClassName("product-name")[0].innerHTML = name;
@@ -34,19 +35,26 @@ $(document).ready ( function () {
 			document.getElementById("item" + String(i)).childNodes[0].getElementsByClassName("product-shape")[0].innerHTML = shape;
 			document.getElementById("item" + String(i)).childNodes[0].getElementsByClassName("price")[0].innerHTML = price;
 			document.getElementById("item" + String(i)).childNodes[0].getElementsByClassName("quantity")[0].innerHTML = "x" + quantity;
+			document.getElementById("item" + String(i)).getElementsByClassName(".a-link").id = String(i);
+			console.log(i);
 			document.getElementById("item" + String(i)).childNodes[0].getElementsByClassName("subtotal")[0].innerHTML = "$" + subtotal;
 		}
 	}
 	
-	$(".a-link").click(function() {
-		$(this).closest(".item-container").remove();
-		console.log($(this));
-	})
-
-
-
-//$(document).ready(function () {
-
+//	$(".a-link").click(function() {
+//		$(this).closest(".item-container").remove();
+//		console.log($(this));
+//	});
 	
-
+	$(".a-link").click(function() {
+		var thisButton = $(this).attr("id");
+		console.log(thisButton);
+		cartArray = JSON.parse(localStorage.getItem("savePillow")).splice($(this).attr("id"), 1);
+		localStorage.setItem("savePillow", JSON.stringify(cartArray));
+//		location.reload();
+		console.log($(this).attr("id"));
+//		$(this).closest(".item-container").remove();
+//		console.log($(this));
+	});
+	
 });
