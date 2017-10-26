@@ -41,14 +41,16 @@ $(document).ready ( function () {
 		}
 	}
 	
-//	$(".a-link").click(function() {
-//		$(this).closest(".item-container").remove();
-//		console.log($(this));
-//	});
-	
 	$(".a-link").click(function() {
-		var thisId = $(this).attr("id");
+		// $(this).closest(".item-container").remove();
+		$("#cart-contents").closest(".item-container");
 		console.log($(this));
+	});
+	
+//	$(".a-link").click(function() {
+//		var thisId = $(this).attr("id");
+//		console.log($(this));
+		
 //		console.log(thisId);
 //		cartArray = JSON.parse(localStorage.getItem("savePillow")).splice(Number($(this).attr("id")), 1);
 //		localStorage.setItem("savePillow", JSON.stringify(cartArray));
