@@ -44,18 +44,9 @@ $(document).ready ( function () {
 	})
 
 
-<<<<<<< HEAD
-//$(document).ready(function () {
-
-	function removeItem() {
-		$(this).parent().remove();
-		console.log($(this).parent());
-	}
-=======
 
 //$(document).ready(function () {
 
 	
->>>>>>> 6c26040dbc77f022f0a6af2685a243b252771644
 
-//});
+});
