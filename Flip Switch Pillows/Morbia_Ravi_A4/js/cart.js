@@ -40,11 +40,11 @@ window.onload = function () {
 
 };
 
-$(document).ready(function () {
+//$(document).ready(function () {
 
 	function removeItem() {
-		$(this).closest(".item-container").remove();
-		console.log($(this));
+		$(this).parent().remove();
+		console.log($(this).parent());
 	}
 
-});
+//});
