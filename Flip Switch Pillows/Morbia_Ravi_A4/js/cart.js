@@ -36,7 +36,7 @@ $(document).ready ( function () {
 			document.getElementById("item" + String(i)).childNodes[0].getElementsByClassName("price")[0].innerHTML = price;
 			document.getElementById("item" + String(i)).childNodes[0].getElementsByClassName("quantity")[0].innerHTML = "x" + quantity;
 			document.getElementById("item" + String(i)).getElementsByClassName(".a-link").id = String(i);
-			console.log(i);
+	console.log(document.getElementById("item" + String(i)).getElementsByClassName(".a-link"));
 			document.getElementById("item" + String(i)).childNodes[0].getElementsByClassName("subtotal")[0].innerHTML = "$" + subtotal;
 		}
 	}
@@ -47,12 +47,13 @@ $(document).ready ( function () {
 //	});
 	
 	$(".a-link").click(function() {
-		var thisButton = $(this).attr("id");
-		console.log(thisButton);
-		cartArray = JSON.parse(localStorage.getItem("savePillow")).splice($(this).attr("id"), 1);
-		localStorage.setItem("savePillow", JSON.stringify(cartArray));
-//		location.reload();
-		console.log($(this).attr("id"));
+		var thisId = $(this).attr("id");
+		console.log($(this));
+//		console.log(thisId);
+//		cartArray = JSON.parse(localStorage.getItem("savePillow")).splice(Number($(this).attr("id")), 1);
+//		localStorage.setItem("savePillow", JSON.stringify(cartArray));
+////		location.reload();
+//		console.log($(this).attr("id"));
 //		$(this).closest(".item-container").remove();
 //		console.log($(this));
 	});
