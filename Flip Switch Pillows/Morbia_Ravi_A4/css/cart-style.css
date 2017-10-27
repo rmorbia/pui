@@ -1,6 +1,6 @@
 @charset "UTF-8";
 /* CSS Document */
-
+/*Page Structure*/
 .page-title {
 	margin-bottom: 20px;
 	font-weight: 700;
@@ -11,7 +11,6 @@
 	border-bottom: 1px solid #8A8A8A;
 	width: 900px;
 	height: 30px;
-	
 }
 
 .col-title {

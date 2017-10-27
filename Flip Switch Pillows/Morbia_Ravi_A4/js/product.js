@@ -62,6 +62,8 @@ $(document).ready(function () {
 
 	// Local storage.
 	$(".add-cart-btn").click(function () {
+		$("#item-confirmation").css("display", "block");
+		$(".content-wrapper").css("top", "40px");
 		// Store all data into variables.
 		var name = document.getElementById("product-name").innerHTML;
 		var type = document.getElementById("type-select").value;
@@ -75,7 +77,7 @@ $(document).ready(function () {
 		// Put data into local storage.
 		var pillowToAdd = new Pillow(name, type, shape, typeImage, shapeImage, price, quantity, subtotal);
 		cartArray.push(pillowToAdd);
-		localStorage.setItem("savePillow", JSON.stringify(cartArray));
+		localStorage.setItem("savePillow", JSON.stringify(cartArray));document.getElementById("nav-cart").innerHTML = "Cart (" + (JSON.parse(localStorage.getItem("savePillow"))).length + ")";
 	});
 
 });
