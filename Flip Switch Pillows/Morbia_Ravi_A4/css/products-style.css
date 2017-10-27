@@ -28,12 +28,6 @@
 }
 
 /*Refine By - Filtering Pillows*/
-input[type='checkbox'] {
-	height:30px;
-	width: 30px;
-	margin: 0 -15px -30px 0;
-}
-
 .title-refine {
 	color: #8a8a8a;
 	font-weight: 300;
@@ -58,7 +52,7 @@ ul, .refine-by li {
 	display: inline;
 	padding-left: 5px;
 	position: relative;
-	top: -8px;
+	top: -2px;
 }
 
 /*Misc Elements on Product Catalogue*/
