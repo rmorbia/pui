@@ -1,15 +1,15 @@
 // JavaScript Document
 
-window.onload = function() {
-	if (JSON.parse(localStorage.getItem("savePillow")) == null) {
+$(document).ready(function() {
+	// Check if there is anything in local storage and update cart in nav
+	var cartArray = JSON.parse(localStorage.getItem("savePillow")) || [];
+	if (cartArray.length == 0) {
 		document.getElementById("nav-cart").innerHTML = "Cart (0)";
 	} else {
-	document.getElementById("nav-cart").innerHTML = "Cart (" + (JSON.parse(localStorage.getItem("savePillow"))).length + ")";
+		document.getElementById("nav-cart").innerHTML = "Cart (" + (JSON.parse(localStorage.getItem("savePillow"))).length + ")";
 	}
-};
 
 /*** Object Constructors ***/
-
 function Pillow(name, type, shape, typeImage, shapeImage, price, quantity, subtotal) {
 	this.name = name;
 	this.type = type;
@@ -22,46 +22,47 @@ function Pillow(name, type, shape, typeImage, shapeImage, price, quantity, subto
 }
 	
 /*** Functions ***/
-function setType() {
+// Change Tyep Image
+$("#type-select").change(function() {
 	var pillowType = document.getElementById("type-select").value;
 	document.getElementById("product-type").innerHTML = pillowType;
-	if (pillowType == "Couch Pillow") {
+	if (pillowType === "Couch Pillow") {
 		document.getElementById("main-photo").src = "img/details/main-product-couch.png";
 		document.getElementById("product-price").innerHTML = "$40";
-	} else if (pillowType == "Bed Pillow") {
+	} else if (pillowType === "Bed Pillow") {
 		document.getElementById("main-photo").src = "img/details/main-product-bed.jpg";
 		document.getElementById("product-price").innerHTML = "$30";
-	} else if (pillowType == "Round Pillow") {
+	} else if (pillowType === "Round Pillow") {
 		document.getElementById("main-photo").src = "img/details/main-product-round.jpg";
 		document.getElementById("product-price").innerHTML = "$35";
 	} else {
 		document.getElementById("main-photo").src = "img/details/main-product-floor.jpg";
 		document.getElementById("product-price").innerHTML = "$50";
 	}
-}
+});
 
 // Change Shape Image
-function setShape() {
+$("#shape-select").change(function() {
 	var pillowShape = document.getElementById("shape-select").value;
 	document.getElementById("product-shape").innerHTML = pillowShape;
-	console.log(pillowShape);
-	if (pillowShape == "Square") {
+	if (pillowShape === "Square") {
 		document.getElementById("shape-img").src = "img/details/shapes-square.png";
-	} else if (pillowShape == "Round") {
+	} else if (pillowShape === "Round") {
 		document.getElementById("shape-img").src = "img/details/shapes-round.png";
-	} else if (pillowShape == "Dog") {
+	} else if (pillowShape === "Dog") {
 		document.getElementById("shape-img").src = "img/details/shapes-dog.png";
-	} else if (pillowShape == "Bear") {
+	} else if (pillowShape === "Bear") {
 		document.getElementById("shape-img").src = "img/details/shapes-bear.png";
-	} else if (pillowShape == "Bunny") {
+	} else if (pillowShape === "Bunny") {
 		document.getElementById("shape-img").src = "img/details/shapes-bunny.png";
 	} else {
 		document.getElementById("shape-img").src = "img/details/shapes-cat.png";
 	}
-}
+});
 
 /*** Local Storage ***/
-function saveItem() {
+$(".add-cart-btn").click(function() {
+	// Store all data into variables
 	var name = document.getElementById("product-name").innerHTML;
 	var type = document.getElementById("type-select").value;
 	var shape = document.getElementById("shape-select").value;
@@ -70,18 +71,13 @@ function saveItem() {
 	var price = document.getElementById("product-price").innerHTML;
 	var quantity = document.getElementById("quantity").value;
 	var subtotal = Number(price.substring(1,price.length)) * quantity;
-	console.log(price.substring(1,price.length));
-	console.log(quantity);
-	console.log(subtotal);
-
-	var cartArray = JSON.parse(localStorage.getItem("savePillow")) || [];
+	
+	// Put data into local storage
 	var pillowToAdd = new Pillow(name, type, shape, typeImage, shapeImage, price, quantity, subtotal);
-console.log(cartArray);
 	cartArray.push(pillowToAdd);
 	localStorage.setItem("savePillow", JSON.stringify(cartArray));
-console.log((JSON.parse(localStorage.getItem("savePillow")) || []).length + " item(s) in local storage.");
-	
-	// Update Cart in Nav
-	// Need to figure out what to do when there is nothing in local storage!!!!!!!!!!!
-	document.getElementById("nav-cart").innerHTML = "Cart (" + (JSON.parse(localStorage.getItem("savePillow"))).length + ")";
-}
+});
+		
+
+});		
+		

@@ -1,14 +1,16 @@
 // JavaScript Document
 
-$(document).ready ( function () {
-	// Update Cart # in Nav
-	if (JSON.parse(localStorage.getItem("savePillow")) == null) {
+$(document).ready (function () {
+	// Check if there is anything in local storage and update cart in nav.
+	var cartArray = JSON.parse(localStorage.getItem("savePillow")) || [];
+	if (cartArray.length === 0) {
+		document.getElementsByClassName("no-items")[0].style.display = "block";
 		document.getElementById("nav-cart").innerHTML = "Cart (0)";
 	} else {
+		document.getElementsByClassName("no-items")[0].style.display = "none";
 		document.getElementById("nav-cart").innerHTML = "Cart (" + (JSON.parse(localStorage.getItem("savePillow"))).length + ")";
 		
-		// Get items from local storage
-		var cartArray = JSON.parse(localStorage.getItem("savePillow"));
+		// Get items from local storage.
 		for (var i = 0; i < cartArray.length; i++) {
 			// Parse localStorage to get item attributes.
 			var name = JSON.parse(localStorage.savePillow)[i].name;
@@ -20,7 +22,7 @@ $(document).ready ( function () {
 			var quantity = JSON.parse(localStorage.savePillow)[i].quantity;
 			var subtotal = JSON.parse(localStorage.savePillow)[i].subtotal;
 
-			// Create HTML for new item
+			// Create HTML for new item.
 			var newItemHtml = document.getElementById("item").outerHTML;
 			var newDiv = document.createElement("div");
 			newDiv.id = "item" + String(i);
@@ -35,29 +37,17 @@ $(document).ready ( function () {
 			document.getElementById("item" + String(i)).childNodes[0].getElementsByClassName("product-shape")[0].innerHTML = shape;
 			document.getElementById("item" + String(i)).childNodes[0].getElementsByClassName("price")[0].innerHTML = price;
 			document.getElementById("item" + String(i)).childNodes[0].getElementsByClassName("quantity")[0].innerHTML = "x" + quantity;
-			document.getElementById("item" + String(i)).getElementsByClassName(".a-link").id = String(i);
-	console.log(document.getElementById("item" + String(i)).getElementsByClassName(".a-link"));
+			document.getElementById("item" + String(i)).childNodes[0].getElementsByClassName("a-link")[0].setAttribute("id", ""+String(i));
 			document.getElementById("item" + String(i)).childNodes[0].getElementsByClassName("subtotal")[0].innerHTML = "$" + subtotal;
 		}
-	}
-	
-	$(".a-link").click(function() {
-		// $(this).closest(".item-container").remove();
-		$("#cart-contents").closest(".item-container");
-		console.log($(this));
-	});
-	
-//	$(".a-link").click(function() {
-//		var thisId = $(this).attr("id");
-//		console.log($(this));
 		
-//		console.log(thisId);
-//		cartArray = JSON.parse(localStorage.getItem("savePillow")).splice(Number($(this).attr("id")), 1);
-//		localStorage.setItem("savePillow", JSON.stringify(cartArray));
-////		location.reload();
-//		console.log($(this).attr("id"));
-//		$(this).closest(".item-container").remove();
-//		console.log($(this));
-	});
+		// Remove deleted items.
+		$(".a-link").click(function() {
+			cartArray.splice(Number($(this).attr("id")), 1);
+			localStorage.setItem("savePillow", JSON.stringify(cartArray));
+			console.log(cartArray);
+			location.reload();
+		});
+	}
 	
 });
