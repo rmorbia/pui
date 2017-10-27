@@ -1,6 +1,6 @@
 // JavaScript Document
 
-$(document).ready (function () {
+$(document).ready(function () {
 	// Check if there is anything in local storage and update cart in nav.
 	var cartArray = JSON.parse(localStorage.getItem("savePillow")) || [];
 	if (cartArray.length === 0) {
@@ -9,7 +9,7 @@ $(document).ready (function () {
 	} else {
 		document.getElementsByClassName("no-items")[0].style.display = "none";
 		document.getElementById("nav-cart").innerHTML = "Cart (" + (JSON.parse(localStorage.getItem("savePillow"))).length + ")";
-		
+
 		// Get items from local storage.
 		for (var i = 0; i < cartArray.length; i++) {
 			// Parse localStorage to get item attributes.
@@ -37,17 +37,17 @@ $(document).ready (function () {
 			document.getElementById("item" + String(i)).childNodes[0].getElementsByClassName("product-shape")[0].innerHTML = shape;
 			document.getElementById("item" + String(i)).childNodes[0].getElementsByClassName("price")[0].innerHTML = price;
 			document.getElementById("item" + String(i)).childNodes[0].getElementsByClassName("quantity")[0].innerHTML = "x" + quantity;
-			document.getElementById("item" + String(i)).childNodes[0].getElementsByClassName("a-link")[0].setAttribute("id", ""+String(i));
+			document.getElementById("item" + String(i)).childNodes[0].getElementsByClassName("a-link")[0].setAttribute("id", "" + String(i));
 			document.getElementById("item" + String(i)).childNodes[0].getElementsByClassName("subtotal")[0].innerHTML = "$" + subtotal;
 		}
-		
+
 		// Remove deleted items.
-		$(".a-link").click(function() {
+		$(".a-link").click(function () {
 			cartArray.splice(Number($(this).attr("id")), 1);
 			localStorage.setItem("savePillow", JSON.stringify(cartArray));
 			console.log(cartArray);
 			location.reload();
 		});
 	}
-	
+
 });
