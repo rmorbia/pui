@@ -1,0 +1,569 @@
+@charset "utf-8";
+/* CSS Document */
+
+/* Mobile Screen Size */
+@media only screen and (min-width: 1px) {
+
+	/*===== Bootstrap Changes ======*/
+	
+	/*===== General Styles ======*/
+	body {overflow-x: hidden; background: black;}
+	a {color: white;}
+	h2, h3, h4, p {font-family: Lato, sans-serif;}
+	h1 {
+		font-family: "Arial Narrow", sans-serif;
+		font-size: 30px;
+		font-weight: bold;
+	}
+	h2 {
+		font-size: 20px;
+		font-weight: 400;
+	}
+	h3 {
+		font-size: 16px;
+		font-weight: 600;
+		color: white;
+	}
+	h4 {
+		font-size: 14px;
+		font-weight: 600;
+	}
+	p {
+		font-size: 12px;
+		line-height: 20px;;
+		font-weight: 300;
+		margin-top: 16px;
+		color: #c6c6c6;
+	}
+	
+	.wrapper {
+		width: 100%;
+		margin: 0 auto;
+		padding: 0 20px;
+		position: relative;
+	}
+
+	.full-width-img {
+		width: 100vw;
+		height: 30vh;
+		background-size: cover;
+		position: relative;
+	}
+	
+	/*===== Intro ======*/
+	.hero-panel {
+		background-image: url("../img/mars-hero.jpg");
+		background-position: 18% 50%;
+		text-align: center;
+		height: 40vh;
+	}
+	.home-chevron {
+		font-size: 40px;
+		color: white;
+		position: relative;
+		top: 80vh;
+	}
+	
+	.mars-vehicle {background-image: url("../img/mars-vehicle.jpg"); background-position: center center;}
+	.nasa-developing {
+		padding-top: 20px;
+		margin-left: -15px;
+		margin-right: -15px;
+		color: #C47509;
+		text-shadow: 0px 0px 1px black;
+	}
+	
+	.journey-to-mars {
+		background-image: url("../img/journey-to-mars-wide.jpg");
+		background-position: center center;
+		background-repeat: no-repeat;
+		background-size: contain;
+	}
+	
+	.new-section {
+		margin-top: 40px;
+	}
+	
+	/*===== Challenges ======*/
+	.challenges-img{background-image: url("../img/mars-horizon.jpg");}
+	.title-challenges {
+		color: #D0D758;
+		position: absolute;
+		top: 10vh; left: 20px;
+		text-shadow: 1px 1px 6px #666;
+	}
+	
+	.section-pad{
+		padding: 20px 0;
+	}
+	.text-half {
+		padding: 0;
+	}
+	.image-half {
+		max-width: 100%;
+		margin-top: 0;
+		background-size: cover;
+	}
+	
+	.logistics-img {
+		background-image: url("../img/mission-art.jpg");
+		background-position: 70% 50%;
+		height: 200px;
+	}
+	.physical-img {
+		background-image: url("../img/chart.png");
+		background-size: contain;
+		background-position: left center;
+		background-repeat: no-repeat;
+		float: none;
+		width: 633px;
+		height: 200px;
+		margin: 0;
+	}
+	.protection-img {
+		background-image: url("../img/mars-rover.jpg");
+		background-position: 50% 50%;
+		height: 200px;
+	}
+	
+	/*===== Mission Proposals ======*/
+	.proposals-image {background-image: url("../img/rocket.jpg");}
+	.title-mission, .title-proposals {
+		color: #D0D758;
+		width: auto;
+		margin: 0;
+	}
+	.title-mission {
+		position: absolute;
+		top: 6vh; left: 20vw;
+		text-shadow: 3px 3px 10px #666;
+	}
+	.title-proposals {
+		position: absolute;
+		top: 10vh; left: 57vw;
+		text-shadow: 3px 3px 10px #666;
+	}
+	
+	.dstransport-img {
+		background-image: url("../img/nasa-lab.jpg");
+		background-position: 30% center;
+		margin-top: 0;
+		height: 200px;
+	}
+	
+	.tech-challenges-image {
+		background-image: url("../img/nasa-tech-home.jpg");
+	}
+	.title-tech-challenges {
+		color: #D0D758;
+		position: absolute;
+		top: 10vh; left: 20px;
+		text-shadow: 3px 3px 10px #666;
+	}
+	
+	/*===== Innovation and Hurdles ======*/
+	.terrain-image {
+		box-sizing: border-box;
+		background-image: url("../img/terrain-and-orbit.jpg");
+		background-size: cover;
+		background-position: 25% center;
+		height: auto;
+		padding: 0;
+	}
+	.dummy-img {
+		display: none;
+	}
+	.text-innovation {
+		margin: 40px auto 30px auto;
+		text-shadow: 0 0 6px black;
+	}
+	
+	/*===== Resources ======*/
+	.resources {
+		text-align: center;
+		vertical-align: bottom;
+		margin-top: 100px;
+		margin-bottom: 30px;
+		color: white;
+	}
+	.resource-links {
+		font-size: 14px;
+		line-height: 22px;
+		margin: 0;
+	}
+
+}
+
+/* Laptop Screen Size */
+@media only screen and (min-width: 769px) {
+	
+	/*===== Bootstrap Changes ======*/
+	
+	/*===== General Styles ======*/
+	body {overflow-x: hidden; background: black;}
+	a {color: white;}
+	h2, h3, h4, p {font-family: Lato, sans-serif;}
+	h1 {
+		font-family: "Arial Narrow", sans-serif;
+		font-size: 100px;
+		font-weight: bold;
+	}
+	h2 {
+		font-size: 60px;
+		font-weight: 400;
+	}
+	h3 {
+		font-size: 50px;
+		font-weight: 600;
+		color: white;
+	}
+	h4 {
+		font-size: 20px;
+		font-weight: 600;
+	}
+	p {
+		font-size: 24px;
+		line-height: 40px;;
+		font-weight: 300;
+		margin-top: 30px;
+		color: #c6c6c6;
+	}
+	
+	.wrapper {
+		width: 100%;
+		max-width: 1366px;
+		margin: 0 auto;
+		padding: 0;
+		position: relative;
+	}
+
+	.full-width-img {
+		width: 100vw;
+		height: 100vh;
+		background-size: cover;
+		position: relative;
+	}
+	
+	/*===== Intro ======*/
+	.hero-panel {
+		background-image: url("../img/mars-hero.jpg");
+		background-position: 30% 50%;
+		text-align: center;
+	}
+	.home-chevron {
+		font-size: 80px;
+		color: white;
+		position: relative;
+		top: 80vh;
+	}
+	
+	.mars-vehicle {background-image: url("../img/mars-vehicle.jpg"); background-position: center center;}
+	.nasa-developing {
+		padding-top: 30px;
+		color: #49647C;
+		text-shadow: 0px 0px 1px #000;
+	}
+	
+	.journey-to-mars {
+		background-image: url("../img/journey-to-mars-wide.jpg");
+		background-position: center center;
+		background-size: cover;
+	}
+	
+	/*===== Challenges ======*/
+	.challenges-img{background-image: url("../img/mars-horizon.jpg");}
+	.title-challenges {
+		color: #D0D758;
+		position: absolute;
+		top: 50vh; left: 0;
+		text-shadow: 3px 3px 10px #666;
+	}
+	
+	.section-pad{
+		padding: 80px 0;
+	}
+	.text-half {
+		padding: 0 50px 0 0;
+	}
+	.image-half {
+		max-width: 100%;
+		margin-top: 100px;
+		background-size: cover;
+	}
+	
+	.logistics-img {
+		background-image: url("../img/mission-art.jpg");
+		background-position: 70% 50%;
+		height: 760px;
+	}
+	.physical-img {
+		background-image: url("../img/chart.png");
+		float: right;
+		width: 633px;
+		height: 715px;
+		margin: 120px 0 50px 50px;
+	}
+	.protection-img {
+		background-image: url("../img/mars-rover.jpg");
+		background-position: 50% 50%;
+		height: 730px;
+	}
+	
+	/*===== Mission Proposals ======*/
+	.proposals-image {background-image: url("../img/rocket.jpg");}
+	.title-mission, .title-proposals {
+		color: #D0D758;
+		width: auto;
+		margin: 0;
+	}
+	.title-mission {
+		position: absolute;
+		top: 20vh; left: 35vw;
+		text-shadow: 3px 3px 10px #666;
+	}
+	.title-proposals {
+		position: absolute;
+		top: 35vh; left: 57vw;
+		text-shadow: 3px 3px 10px #666;
+	}
+	
+	.dstransport-img {
+		background-image: url("../img/nasa-lab.jpg");
+		background-position: 30% center;
+		margin-top: 150px;
+		height: 780px;
+	}
+	
+	.tech-challenges-image {
+		background-image: url("../img/nasa-tech-home.jpg");
+	}
+	.title-tech-challenges {
+		color: #D0D758;
+		position: absolute;
+		top: 50vh; left: 0;
+		text-shadow: 3px 3px 10px #666;
+	}
+	
+	/*===== Innovation and Hurdles ======*/
+	.terrain-image {
+		box-sizing: border-box;
+		background-image: url("../img/terrain-and-orbit.jpg");
+		background-size: cover;
+		height: 2254px;
+		padding: 0;
+	}
+	.dummy-img {
+		position: absolute;
+		top: 0; left: 0;
+		max-height: 2254px;
+		width: auto;
+		opacity: 0;
+	}
+	.text-innovation {
+		margin: 150px auto 30px auto;
+	}
+	
+	/*===== Resources ======*/
+	.resources {
+		text-align: center;
+		vertical-align: bottom;
+		margin-top: 200px;
+		margin-bottom: 30px;
+		color: white;
+	}
+	.resource-links {
+		font-size: 14px;
+		line-height: 22px;
+		margin: 0;
+	}
+
+}
+
+/* Large Desktop Screen Size */
+@media only screen and (min-width: 1201px) {
+
+/* ========== Brakpoint larger than 1200px ========== */
+
+	/*===== Bootstrap Changes ======*/
+	
+	/*===== General Styles ======*/
+	body {overflow-x: hidden; background: black;}
+	a {color: white;}
+	h2, h3, h4, p {font-family: Lato, sans-serif;}
+	h1 {
+		font-family: "Arial Narrow", sans-serif;
+		font-size: 100px;
+		font-weight: bold;
+	}
+	h2 {
+		font-size: 60px;
+		font-weight: 400;
+	}
+	h3 {
+		font-size: 50px;
+		font-weight: 600;
+		color: white;
+	}
+	h4 {
+		font-size: 20px;
+		font-weight: 600;
+	}
+	p {
+		font-size: 24px;
+		line-height: 40px;;
+		font-weight: 300;
+		margin-top: 30px;
+		color: #c6c6c6;
+	}
+	
+	.wrapper {
+		width: 100%;
+		max-width: 1366px;
+		margin: 0 auto;
+		padding: 0;
+		position: relative;
+	}
+
+	.full-width-img {
+		width: 100vw;
+		height: 100vh;
+		background-size: cover;
+		position: relative;
+	}
+	
+	/*===== Intro ======*/
+	.hero-panel {
+		background-image: url("../img/mars-hero.jpg");
+		background-position: 30% 50%;
+		text-align: center;
+	}
+	.home-chevron {
+		font-size: 80px;
+		color: white;
+		position: relative;
+		top: 80vh;
+	}
+	
+	.mars-vehicle {background-image: url("../img/mars-vehicle.jpg"); background-position: center center;}
+	.nasa-developing {
+		padding-top: 30px;
+		color: #C47509;
+		text-shadow: 0px 0px 1px black;
+	}
+	
+	.journey-to-mars {
+		background-image: url("../img/journey-to-mars-wide.jpg");
+		background-position: center center;
+		background-size: cover;
+	}
+	
+	/*===== Challenges ======*/
+	.challenges-img{background-image: url("../img/mars-horizon.jpg");}
+	.title-challenges {
+		color: #D0D758;
+		position: absolute;
+		top: 50vh; left: 0;
+		text-shadow: 3px 3px 10px #666;
+	}
+	
+	.section-pad{
+		padding: 80px 0;
+	}
+	.text-half {
+		padding: 0 50px 0 0;
+	}
+	.image-half {
+		max-width: 100%;
+		margin-top: 100px;
+		background-size: cover;
+	}
+	
+	.logistics-img {
+		background-image: url("../img/mission-art.jpg");
+		background-position: 70% 50%;
+		height: 760px;
+	}
+	.physical-img {
+		background-image: url("../img/chart.png");
+		float: right;
+		width: 633px;
+		height: 715px;
+		margin: 120px 0 50px 50px;
+	}
+	.protection-img {
+		background-image: url("../img/mars-rover.jpg");
+		background-position: 50% 50%;
+		height: 730px;
+	}
+	
+	/*===== Mission Proposals ======*/
+	.proposals-image {background-image: url("../img/rocket.jpg");}
+	.title-mission, .title-proposals {
+		color: #D0D758;
+		width: auto;
+		margin: 0;
+	}
+	.title-mission {
+		position: absolute;
+		top: 20vh; left: 35vw;
+		text-shadow: 3px 3px 10px #666;
+	}
+	.title-proposals {
+		position: absolute;
+		top: 35vh; left: 57vw;
+		text-shadow: 3px 3px 10px #666;
+	}
+	
+	.dstransport-img {
+		background-image: url("../img/nasa-lab.jpg");
+		background-position: 30% center;
+		margin-top: 150px;
+		height: 780px;
+	}
+	
+	.tech-challenges-image {
+		background-image: url("../img/nasa-tech-home.jpg");
+	}
+	.title-tech-challenges {
+		color: #D0D758;
+		position: absolute;
+		top: 50vh; left: 0;
+		text-shadow: 3px 3px 10px #666;
+	}
+	
+	/*===== Innovation and Hurdles ======*/
+	.terrain-image {
+		box-sizing: border-box;
+		background-image: url("../img/terrain-and-orbit.jpg");
+		background-size: cover;
+		height: 2254px;
+		padding: 0;
+	}
+	.dummy-img {
+		position: absolute;
+		top: 0; left: 0;
+		max-height: 2254px;
+		width: auto;
+		opacity: 0;
+	}
+	.text-innovation {
+		margin: 150px auto 30px auto;
+	}
+	
+	/*===== Resources ======*/
+	.resources {
+		text-align: center;
+		vertical-align: bottom;
+		margin-top: 200px;
+		margin-bottom: 30px;
+		color: white;
+	}
+	.resource-links {
+		font-size: 14px;
+		line-height: 22px;
+		margin: 0;
+	}
+
+}
+
+
