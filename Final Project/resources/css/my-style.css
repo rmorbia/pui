@@ -80,10 +80,6 @@
 		background-size: contain;
 	}
 	
-	.new-section {
-		margin-top: 40px;
-	}
-	
 	/*===== Challenges ======*/
 	.challenges-img{background-image: url("../img/mars-horizon.jpg");}
 	.title-challenges {
@@ -93,8 +89,12 @@
 		text-shadow: 1px 1px 6px #666;
 	}
 	
+	
+	.new-section {
+		margin-top: 40px;
+	}
 	.section-pad{
-		padding: 20px 0;
+		padding: 30px 0;
 	}
 	.text-half {
 		padding: 0;
@@ -181,14 +181,13 @@
 	/*===== Resources ======*/
 	.resources {
 		text-align: center;
-		vertical-align: bottom;
 		margin-top: 100px;
 		margin-bottom: 30px;
 		color: white;
 	}
 	.resource-links {
-		font-size: 14px;
-		line-height: 22px;
+		font-size: 10px;
+		line-height: 16px;
 		margin: 0;
 	}
 
@@ -536,6 +535,7 @@
 		box-sizing: border-box;
 		background-image: url("../img/terrain-and-orbit.jpg");
 		background-size: cover;
+		background-position: 20% center;
 		height: 2254px;
 		padding: 0;
 	}
