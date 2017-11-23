@@ -16,7 +16,7 @@
 		font-weight: bold;
 	}
 	h2 {
-		font-size: 20px;
+		font-size: 18px;
 		font-weight: 400;
 	}
 	h3 {
@@ -77,7 +77,9 @@
 		background-image: url("../img/journey-to-mars-wide.jpg");
 		background-position: center center;
 		background-repeat: no-repeat;
-		background-size: contain;
+		width: 100vw;
+		height: 50vw;
+		background-size: cover;
 	}
 	
 	/*===== Challenges ======*/
@@ -194,9 +196,16 @@
 }
 
 /* Laptop Screen Size */
-@media only screen and (min-width: 769px) {
+@media only screen and (min-width: 768px) {
 	
 	/*===== Bootstrap Changes ======*/
+	.row {
+		margin: 0;
+	}
+	
+	.container-fluid {
+		padding: 0;
+	}
 	
 	/*===== General Styles ======*/
 	body {overflow-x: hidden; background: black;}
@@ -204,41 +213,40 @@
 	h2, h3, h4, p {font-family: Lato, sans-serif;}
 	h1 {
 		font-family: "Arial Narrow", sans-serif;
-		font-size: 100px;
+		font-size: 70px;
 		font-weight: bold;
 	}
 	h2 {
-		font-size: 60px;
+		font-size: 38px;
 		font-weight: 400;
 	}
 	h3 {
-		font-size: 50px;
+		font-size: 32px;
 		font-weight: 600;
 		color: white;
 	}
 	h4 {
-		font-size: 20px;
+		font-size: 18px;
 		font-weight: 600;
 	}
 	p {
-		font-size: 24px;
+		font-size: 20px;
 		line-height: 40px;;
 		font-weight: 300;
 		margin-top: 30px;
-		color: #c6c6c6;
+		color: #E4E4E4;
 	}
 	
 	.wrapper {
 		width: 100%;
-		max-width: 1366px;
 		margin: 0 auto;
-		padding: 0;
+		padding: 0 30px;
 		position: relative;
 	}
 
 	.full-width-img {
 		width: 100vw;
-		height: 100vh;
+		height: 40vh;
 		background-size: cover;
 		position: relative;
 	}
@@ -246,7 +254,8 @@
 	/*===== Intro ======*/
 	.hero-panel {
 		background-image: url("../img/mars-hero.jpg");
-		background-position: 30% 50%;
+		background-position: 20% 50%;
+		height: 500px;
 		text-align: center;
 	}
 	.home-chevron {
@@ -258,14 +267,16 @@
 	
 	.mars-vehicle {background-image: url("../img/mars-vehicle.jpg"); background-position: center center;}
 	.nasa-developing {
-		padding-top: 30px;
-		color: #49647C;
-		text-shadow: 0px 0px 1px #000;
+		padding-top: 40px;
+		color: #C47509;
+		text-shadow: 0px 0px 1px black;
 	}
 	
 	.journey-to-mars {
 		background-image: url("../img/journey-to-mars-wide.jpg");
 		background-position: center center;
+		width: 100vw;
+		height: 50vw;
 		background-size: cover;
 	}
 	
@@ -274,38 +285,42 @@
 	.title-challenges {
 		color: #D0D758;
 		position: absolute;
-		top: 50vh; left: 0;
+		top: 20vh; left: 30px;
 		text-shadow: 3px 3px 10px #666;
 	}
 	
+	.new-section {
+		marign-top: 80px;
+	}
 	.section-pad{
-		padding: 80px 0;
+		padding: 50px 0;
 	}
 	.text-half {
-		padding: 0 50px 0 0;
+		padding: 0;
 	}
 	.image-half {
 		max-width: 100%;
-		margin-top: 100px;
+		margin-top: 0;
 		background-size: cover;
 	}
 	
 	.logistics-img {
 		background-image: url("../img/mission-art.jpg");
 		background-position: 70% 50%;
-		height: 760px;
+		height: 300px;
 	}
 	.physical-img {
 		background-image: url("../img/chart.png");
-		float: right;
-		width: 633px;
-		height: 715px;
-		margin: 120px 0 50px 50px;
+		background-size: contain;
+		float: none;
+		width: auto;
+		height: 300px;
+		margin-bottom: 0;
 	}
 	.protection-img {
 		background-image: url("../img/mars-rover.jpg");
-		background-position: 50% 50%;
-		height: 730px;
+		background-position: 50% 15%;
+		height: 300px;
 	}
 	
 	/*===== Mission Proposals ======*/
@@ -317,20 +332,20 @@
 	}
 	.title-mission {
 		position: absolute;
-		top: 20vh; left: 35vw;
+		top: 8vh; left: 20vw;
 		text-shadow: 3px 3px 10px #666;
 	}
 	.title-proposals {
 		position: absolute;
-		top: 35vh; left: 57vw;
+		top: 15vh; left: 55vw;
 		text-shadow: 3px 3px 10px #666;
 	}
 	
 	.dstransport-img {
 		background-image: url("../img/nasa-lab.jpg");
 		background-position: 30% center;
-		margin-top: 150px;
-		height: 780px;
+		margin-top: 0;
+		height: 300px;
 	}
 	
 	.tech-challenges-image {
@@ -339,7 +354,7 @@
 	.title-tech-challenges {
 		color: #D0D758;
 		position: absolute;
-		top: 50vh; left: 0;
+		top: 18vh; left: 30px;
 		text-shadow: 3px 3px 10px #666;
 	}
 	
@@ -348,25 +363,21 @@
 		box-sizing: border-box;
 		background-image: url("../img/terrain-and-orbit.jpg");
 		background-size: cover;
-		height: 2254px;
+		height: auto;
 		padding: 0;
 	}
 	.dummy-img {
-		position: absolute;
-		top: 0; left: 0;
-		max-height: 2254px;
-		width: auto;
-		opacity: 0;
+		display: none;
 	}
 	.text-innovation {
-		margin: 150px auto 30px auto;
+		margin: 80px auto 30px auto;
+		padding: 0;
 	}
 	
 	/*===== Resources ======*/
 	.resources {
 		text-align: center;
-		vertical-align: bottom;
-		margin-top: 200px;
+		margin-top: 120px;
 		margin-bottom: 30px;
 		color: white;
 	}
@@ -379,7 +390,7 @@
 }
 
 /* Large Desktop Screen Size */
-@media only screen and (min-width: 1201px) {
+@media only screen and (min-width: 1200px) {
 
 /* ========== Brakpoint larger than 1200px ========== */
 
