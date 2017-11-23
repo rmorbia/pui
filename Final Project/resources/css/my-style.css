@@ -1,4 +1,5 @@
 @charset "utf-8";
+@import url('https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i');
 /* CSS Document */
 
 /* Mobile Screen Size */
@@ -7,13 +8,16 @@
 	/*===== Bootstrap Changes ======*/
 	
 	/*===== General Styles ======*/
-	body {overflow-x: hidden; background: black;}
+	body {
+		overflow-x: hidden;
+		background: black;
+	}
 	a {color: white;}
 	h2, h3, h4, p {font-family: Lato, sans-serif;}
 	h1 {
 		font-family: "Arial Narrow", sans-serif;
 		font-size: 30px;
-		font-weight: bold;
+		font-weight: 700;
 	}
 	h2 {
 		font-size: 18px;
@@ -21,12 +25,12 @@
 	}
 	h3 {
 		font-size: 16px;
-		font-weight: 600;
+		font-weight: 700;
 		color: white;
 	}
 	h4 {
 		font-size: 14px;
-		font-weight: 600;
+		font-weight: 700;
 	}
 	p {
 		font-size: 12px;
@@ -214,7 +218,7 @@
 	h1 {
 		font-family: "Arial Narrow", sans-serif;
 		font-size: 70px;
-		font-weight: bold;
+		font-weight: 700;
 	}
 	h2 {
 		font-size: 38px;
@@ -222,16 +226,16 @@
 	}
 	h3 {
 		font-size: 32px;
-		font-weight: 600;
+		font-weight: 700;
 		color: white;
 	}
 	h4 {
 		font-size: 18px;
-		font-weight: 600;
+		font-weight: 700;
 	}
 	p {
 		font-size: 20px;
-		line-height: 40px;;
+		line-height: 36px;;
 		font-weight: 300;
 		margin-top: 30px;
 		color: #E4E4E4;
@@ -396,14 +400,16 @@
 
 	/*===== Bootstrap Changes ======*/
 	
-	/*===== General Styles ======*/
-	body {overflow-x: hidden; background: black;}
-	a {color: white;}
+	/*===== Font ======*/
+	a:link, a:visited, a:hover, a:active {
+		color: white;
+		text-decoration: none;
+	}
 	h2, h3, h4, p {font-family: Lato, sans-serif;}
 	h1 {
 		font-family: "Arial Narrow", sans-serif;
 		font-size: 100px;
-		font-weight: bold;
+		font-weight: 700;
 	}
 	h2 {
 		font-size: 60px;
@@ -411,12 +417,12 @@
 	}
 	h3 {
 		font-size: 50px;
-		font-weight: 600;
+		font-weight: 700;
 		color: white;
 	}
 	h4 {
 		font-size: 20px;
-		font-weight: 600;
+		font-weight: 700;
 	}
 	p {
 		font-size: 24px;
@@ -426,6 +432,35 @@
 		color: #c6c6c6;
 	}
 	
+	/*===== Nav ======*/
+	.nav-panel {
+		position: fixed;
+		top: 20vh; right: 100px;
+		text-align: right;
+		z-index: 99;
+		background: blue;
+	}
+	.nav-link {
+		font-family: Lato, sans-serif;
+		font-size: 16px;
+		line-height: 10vh;
+		font-weight: 400;
+		text-shadow: 1px 1px 4px #333;
+	}
+	.nav-link::after {
+		position: relative;
+		top: 5vh; right: -50px;
+		width: 20px;
+    	height: 20px;
+		background: white;
+    	transform: translateX(-50%) translateY(-50%) scale(1);
+    	border-radius: 50%;
+		content: "";
+		box-shadow: 1px 1px 4px #999;
+	}
+	
+	/*===== General Styles ======*/
+	body {overflow-x: hidden; background: black;}
 	.wrapper {
 		width: 100%;
 		max-width: 1366px;
