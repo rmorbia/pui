@@ -4,15 +4,12 @@
 
 /* Mobile Screen Size */
 @media only screen and (min-width: 1px) {
-
-	/*===== Bootstrap Changes ======*/
 	
-	/*===== General Styles ======*/
-	body {
-		overflow-x: hidden;
-		background: black;
+	/*===== Font ======*/
+	a:link, a:visited, a:hover, a:active {
+		color: white;
+		text-decoration: none;
 	}
-	a {color: white;}
 	h2, h3, h4, p {font-family: Lato, sans-serif;}
 	h1 {
 		font-family: "Arial Narrow", sans-serif;
@@ -40,6 +37,54 @@
 		color: #c6c6c6;
 	}
 	
+	/*===== Nav ======*/
+	.nav-panel {
+		position: fixed;
+		bottom: 0; left: 0;
+		text-align: center;
+		background: white;
+		width: 100%;
+		height: 80px;
+		box-shadow: 0 0 30px #666;
+		z-index: 99;
+	}
+	.nav-panel li {
+		display: inline-block;
+	}
+	ul {
+		list-style-type: none;
+		margin: 0;
+		padding: 0;
+	}
+	.nav-link {
+		position: relative;
+	}
+	.nav-link:hover {
+		opacity: 1;
+	}
+	.link-text {
+		font-family: Lato, sans-serif;
+		font-size: 12px;
+		font-weight: 900;
+		line-height: 80px;
+		color: #de4e2b;
+		text-shadow: none;
+		margin: 0;
+		padding: 0 20px;
+	}
+	.nav-link:hover > .link-text {
+		opacity: 1;
+		transition: all 0.3s;
+	}
+	.nav-point {
+		
+	}
+	
+	/*===== General Styles ======*/
+	body {
+		overflow-x: hidden;
+		background: black;
+	}
 	.wrapper {
 		width: 100%;
 		margin: 0 auto;
@@ -211,9 +256,11 @@
 		padding: 0;
 	}
 	
-	/*===== General Styles ======*/
-	body {overflow-x: hidden; background: black;}
-	a {color: white;}
+	/*===== Font ======*/
+	a:link, a:visited, a:hover, a:active {
+		color: white;
+		text-decoration: none;
+	}
 	h2, h3, h4, p {font-family: Lato, sans-serif;}
 	h1 {
 		font-family: "Arial Narrow", sans-serif;
@@ -241,6 +288,52 @@
 		color: #E4E4E4;
 	}
 	
+	/*===== Nav ======*/
+	.nav-panel {
+		position: fixed;
+		bottom: 0; left: 0;
+		text-align: center;
+		background: white;
+		width: 100%;
+		height: 80px;
+		box-shadow: 0 0 30px #666;
+		z-index: 99;
+	}
+	.nav-panel li {
+		display: inline-block;
+	}
+	ul {
+		list-style-type: none;
+		margin: 0;
+		padding: 0;
+	}
+	.nav-link {
+		position: relative;
+	}
+	.nav-link:hover {
+		opacity: 1;
+	}
+	.link-text {
+		font-family: Lato, sans-serif;
+		font-size: 12px;
+		font-weight: 900;
+		line-height: 80px;
+		color: #de4e2b;
+		text-shadow: none;
+		margin: 0;
+		padding: 0 20px;
+	}
+	.nav-link:hover > .link-text {
+		opacity: 1;
+		transition: all 0.3s;
+	}
+	.nav-point {
+		
+	}
+	
+	/*===== General Styles ======*/
+	body {overflow-x: hidden; background: black;}
+	
 	.wrapper {
 		width: 100%;
 		margin: 0 auto;
@@ -250,7 +343,7 @@
 
 	.full-width-img {
 		width: 100vw;
-		height: 40vh;
+		height: 35vh;
 		background-size: cover;
 		position: relative;
 	}
@@ -382,7 +475,7 @@
 	.resources {
 		text-align: center;
 		margin-top: 120px;
-		margin-bottom: 30px;
+		margin-bottom: 110px;
 		color: white;
 	}
 	.resource-links {
@@ -397,8 +490,6 @@
 @media only screen and (min-width: 1200px) {
 
 /* ========== Brakpoint larger than 1200px ========== */
-
-	/*===== Bootstrap Changes ======*/
 	
 	/*===== Font ======*/
 	a:link, a:visited, a:hover, a:active {
@@ -435,37 +526,53 @@
 	/*===== Nav ======*/
 	.nav-panel {
 		position: fixed;
-		top: 20vh; right: 100px;
+		top: 30vh; right: 100px;
 		text-align: right;
 		z-index: 99;
-		background: blue;
+	}
+	ul {
+		list-style-type: none;
 	}
 	.nav-link {
-		font-family: Lato, sans-serif;
-		font-size: 16px;
-		line-height: 10vh;
-		font-weight: 400;
-		text-shadow: 1px 1px 4px #333;
-	}
-	.nav-link::after {
 		position: relative;
-		top: 5vh; right: -50px;
+		opacity: 0.3;
+	}
+	.nav-link:hover {
+		opacity: 1;
+	}
+	.link-text {
+		font-family: Lato, sans-serif;
+		font-size: 12px;
+		font-weight: 900;
+		line-height: 6vh;
+		color: #de4e2b;
+		text-shadow: 0 0 2px black;
+		margin: 0;
+		opacity: 0.3;
+	}
+	.nav-link:hover > .link-text {
+		opacity: 1;
+		transition: all 0.3s;
+	}
+	.nav-point {
+		position: absolute;
+		top: -3vh; right: -50px;
 		width: 20px;
     	height: 20px;
 		background: white;
     	transform: translateX(-50%) translateY(-50%) scale(1);
     	border-radius: 50%;
-		content: "";
 		box-shadow: 1px 1px 4px #999;
 	}
 	
 	/*===== General Styles ======*/
 	body {overflow-x: hidden; background: black;}
+	
 	.wrapper {
 		width: 100%;
 		max-width: 1366px;
 		margin: 0 auto;
-		padding: 0;
+		padding: 0 40px;
 		position: relative;
 	}
 
@@ -507,7 +614,7 @@
 	.title-challenges {
 		color: #D0D758;
 		position: absolute;
-		top: 50vh; left: 0;
+		top: 50vh; left: 40px;
 		text-shadow: 3px 3px 10px #666;
 	}
 	
@@ -572,7 +679,7 @@
 	.title-tech-challenges {
 		color: #D0D758;
 		position: absolute;
-		top: 50vh; left: 0;
+		top: 50vh; left: 40px;
 		text-shadow: 3px 3px 10px #666;
 	}
 	
