@@ -509,6 +509,9 @@
 
 /* ========== Brakpoint larger than 1200px ========== */
 	
+	/*===== Bootstrap Changes ======*/
+	.row {position: relative;}
+	
 	/*===== Font ======*/
 	a:link, a:visited, a:hover, a:active {
 		color: white;
@@ -561,7 +564,7 @@
 	}
 	.nav-link {
 		position: relative;
-		opacity: 0.5;
+		opacity: 0.6;
 	}
 	.nav-link:hover {
 		opacity: 1;
@@ -575,7 +578,7 @@
 		color: #de4e2b;
 		text-shadow: 0 0 2px black;
 		margin: 0;
-		opacity: 0.5;
+		opacity: 0.6;
 	}
 	.nav-link:hover > .link-text {
 		opacity: 1;
@@ -652,11 +655,13 @@
 	}
 	.text-half {
 		padding: 0 50px 0 0;
+		position: relative;
 	}
 	.image-half {
 		max-width: 100%;
 		margin-top: 100px;
 		background-size: cover;
+		position: relative;
 	}
 	
 	.logistics-img {
@@ -744,10 +749,6 @@
 		font-size: 14px;
 		line-height: 22px;
 		margin: 0;
-	}
-	
-	.featurette {
-		position: relative;
 	}
 
 }
