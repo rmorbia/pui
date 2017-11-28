@@ -9,6 +9,8 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <!-- Latest compiled JavaScript -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<!-- Skrollr -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/skrollr/0.6.30/skrollr.min.js"></script>
 <!-- My Files -->
 <link rel="stylesheet" href="resources/css/my-style.css">
 <script src="resources/js/main.js"></script>
@@ -17,7 +19,7 @@
 <body>
 	<!-- Navigation -->
 	<!-- Note: hidden-sm-up would not work -->
-	<div class="hidden-sm hidden-md hidden-lg hidden-lg menu-button">
+	<div id="menu-button" class="hidden-sm hidden-md hidden-lg hidden-lg">
 		<span class="glyphicon glyphicon-menu-hamburger menu-icon"></span>
 	</div>
 	<nav class="nav-panel">
@@ -57,11 +59,27 @@
 			<h1 class="title-challenges">Challenges</h1>
 		</div>
 	</div>
+	<!--  Test Skrollr  -->
+	<div class="row featurette" id="third"
+	data-bottom-top="opacity:0; left:-100%;"
+	data-center-top="opacity:1; left:0;">
+		<div class="col-md-7 text">
+		  <h2 class="featurette-heading">And lastly, this one. <span class="text-muted">Checkmate.</span></h2>
+		  <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+		</div>
+		<div class="col-md-5 image">
+			<img class="featurette-image img-responsive" src="http://placekitten.com/g/600/600" alt="Generic placeholder image">
+		</div>
+	</div>
+
+	<!--  End of Test  -->
 	<div class="wrapper">
 		<!-- Logistics -->
 		<div class="container-fluid">
 			<div class="row section-pad">
-				<div class="col-md-6 col-md-push-6 image-half logistics-img"></div>
+				<div class="col-md-6 col-md-push-6 image-half logistics-img"
+				data-bottom-top="opacity:0; right:-100%;"
+				data-center-top="opacity:1; right:0;"></div>
 				<div class="col-md-6 col-md-pull-6 text-half">
 					<h3>Logistics</h3>
 					<p>The estimated cost of sending humans to Mars is roughly 500 billion U.S. dollars, though the actual costs are likely to be more. The largest limiting factor for sending humans to Mars is funding. In the late 1950s, rivalry between the Soviet Union and the United States stimulated a national priority to send humans to the moon. Under the current global geopolitical climate, however, government funding of these programs has decreased. Recent participation of private companies in space travel and participation by new nations such as India may present new opportunities.<br><br>
