@@ -130,6 +130,13 @@
 		color: white;
 		position: relative;
 		top: 80vh;
+		animation: bounce 1.5s infinite;
+	}
+	@keyframes bounce {
+		0% {position: relative; top: 80vh; opacity: 0;}
+		10% {opacity: 1;}
+		50% {position: relative; top: 85vh; opacity: 0;}
+		100% {position: relative; top: 80vh; opacity: 0;}
 	}
 	
 	.mars-vehicle {background-image: url("../img/mars-vehicle.jpg"); background-position: center center;}
@@ -246,6 +253,7 @@
 	.text-innovation {
 		margin: 40px auto 30px auto;
 		text-shadow: 0 0 6px black;
+		position: relative;
 	}
 	
 	/*===== Resources ======*/
@@ -616,7 +624,6 @@
 	/*===== Intro ======*/
 	.hero-panel {
 		background-image: url("../img/mars-hero.jpg");
-		background-position: 30% 50%;
 		text-align: center;
 	}
 	.home-chevron {
@@ -626,7 +633,7 @@
 		top: 80vh;
 	}
 	
-	.mars-vehicle {background-image: url("../img/mars-vehicle.jpg"); background-position: center center;}
+	.mars-vehicle {background-image: url("../img/mars-vehicle.jpg");}
 	.nasa-developing {
 		padding-top: 30px;
 		color: #C47509;
@@ -744,6 +751,7 @@
 		margin-top: 200px;
 		margin-bottom: 30px;
 		color: white;
+		position: relative;
 	}
 	.resource-links {
 		font-size: 14px;

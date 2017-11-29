@@ -8,7 +8,7 @@ $(document).ready( function() {
 	
 	$('#link-home').click( function() {
 		$('html, body').animate({
-			 scrollTop: $('#home').offset().top}, (Math.abs((scrollPos-$("#journey").offset().top))*300/1000), 'swing');
+			 scrollTop: $('#home').offset().top}, (Math.abs((scrollPos-$("#journey").offset().top))*400/1000), 'swing');
 	});
 
 	$('#link-journey').click( function() {
