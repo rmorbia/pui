@@ -16,13 +16,14 @@
 <script src="resources/js/main.js"></script>
 </head>
 	
-<body>
+<body id="skrollr-body">
 	<!-- Navigation -->
 	<!-- Note: hidden-sm-up would not work -->
 	<div id="menu-button" class="hidden-sm hidden-md hidden-lg hidden-lg">
 		<span class="glyphicon glyphicon-menu-hamburger menu-icon"></span>
 	</div>
 	<nav class="nav-panel">
+		<span class="glyphicon glyphicon-circle-arrow-left nav-dial"></span>
 		<ul>
 			<li><a id="link-home" class="nav-link" href="#home"><p class="link-text">HOME</p>
 				<div class="nav-point"></div>
@@ -47,6 +48,7 @@
 		data-top-bottom="background-position: 0% 50%;">
 		<span class="glyphicon glyphicon-menu-down home-chevron"></span>
 	</div>
+	<!-- Mars Rover -->
 	<div class="full-width-img mars-vehicle"
 		data-bottom-top="background-position: 0% 50%; background-size: 120%;"
 		data-top="background-position: 50% 50%; background-size: 100%;">
@@ -58,9 +60,11 @@
 			</div>
 		</div>
 	</div>
+	<!-- Journey to Mars -->
 	<div id="journey" class="full-width-img journey-to-mars"
-	data-bottom-top="background-position: 50% 10%; background-size: 120%;"
-	data-top-bottom="background-position: 50% 100%; background-size: 120%;"></div>
+	data-bottom-top="background-position: 50% 10%; background-size: 75%;"
+	data-center="background-position: 50% 55%; background-size: 100%;"
+	data-top-bottom="background-position: 50% 100%; background-size: 75%;"></div>
 	<!-- Title - Challenges -->
 	<div id="challenges" class="full-width-img challenges-img new-section"
 	data-bottom-top="background-position: 50% 30%; background-size: 100%;"
@@ -118,8 +122,8 @@
 	</div>
 	<!-- Title - Mission Proposals -->
 	<div id="proposals" class="full-width-img proposals-image new-section"
-	data-bottom-top="background-position: 50% 0%; background-size: 120%;"
-	data-top-bottom="background-position: 50% 100%; background-size: 100%;">
+	data-bottom-top="background-position: 100% 0%; background-size: 120%;"
+	data-top-bottom="background-position: 0% 100%; background-size: 100%;">
 		<h1 class="title-mission">Mission</h1>
 		<h1 class="title-proposals">Proposals</h1>
 	</div>

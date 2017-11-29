@@ -4,6 +4,7 @@ var scrollPos;
 
 $(document).ready( function() {
 	
+	// Scrolling for Navigation //////////
 	scrollPos = $(document).scrollTop();
 	
 	$('#link-home').click( function() {
@@ -31,6 +32,7 @@ $(document).ready( function() {
 			  scrollTop: $('#tech-challenges').offset().top}, (Math.abs((scrollPos-$("#tech-challenges").offset().top))*200/1000), 'swing');
 	});
 	
+	// Mobile Menu Button //////////
 	$("#menu-button").attr("state", "notOpen");
 	$("#menu-button").click( function(){
 		if( $("#menu-button").attr("state") === "notOpen" ) {
@@ -40,21 +42,23 @@ $(document).ready( function() {
 			//Try to animate scroll if near the bottom of hte screen.
 			//$("html, body").animate({ scrollTop: $(document).height() }, 400);
 			$("#menu-button").attr("state", "isOpen");
+			$("#menu-button").html('<span class="glyphicon glyphicon-remove menu-icon"></span>');
 		} else {
 			$(".nav-panel").animate({bottom: '-300'}, "fast");
 			$(this).animate({bottom: '20'}, "fast");
 			$("body").css({"padding-bottom": "0"});
 			$("#menu-button").attr("state", "notOpen");
+			$("#menu-button").html('<span class="glyphicon glyphicon-menu-hamburger menu-icon"></span>');
 		}
     });
 	
-	// Initiate Skrollr /////////
+	// Initiate Skrollr //////////
 	( function( $ ) {
 		// Init Skrollr
 		var s = skrollr.init({
 			render: function(data) {
 				//Debugging - Log the current scroll position.
-				console.log(data.curTop);
+				//console.log(data.curTop);
 			}
 		});
 	} )( jQuery );

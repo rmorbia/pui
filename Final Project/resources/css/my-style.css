@@ -56,6 +56,7 @@
 		color: #de4e2b;
 		position: relative;
 		top: 50%;
+		-webkit-transform: translateY(-50%); 
 		transform: translateY(-50%); 
 	}
 .nav-panel {
@@ -598,9 +599,17 @@
 		width: 20px;
     	height: 20px;
 		background: white;
+    	-webkit-transform: translateX(-50%) translateY(-50%) scale(1);
     	transform: translateX(-50%) translateY(-50%) scale(1);
     	border-radius: 50%;
 		box-shadow: 1px 1px 4px #999;
+	}
+	.nav-dial {
+		color: white;
+		font-size: 16vh;
+		position: absolute;
+		top: 7vh; right: calc(-8vh - 100px);
+		
 	}
 	
 	/*===== General Styles ======*/
@@ -618,6 +627,7 @@
 		width: 100vw;
 		height: 100vh;
 		background-size: cover;
+		background-repeat: no-repeat;
 		position: relative;
 	}
 	
@@ -635,7 +645,8 @@
 	
 	.mars-vehicle {background-image: url("../img/mars-vehicle.jpg");}
 	.nasa-developing {
-		padding-top: 30px;
+		text-align: center;
+		margin-top: 40vh;
 		color: #C47509;
 		text-shadow: 0px 0px 1px black;
 	}
@@ -690,7 +701,10 @@
 	}
 	
 	/*===== Mission Proposals ======*/
-	.proposals-image {background-image: url("../img/rocket.jpg");}
+	.proposals-image {
+		background-image: url("../img/rocket.jpg");
+		background-size: 120%;
+	}
 	.title-mission, .title-proposals {
 		color: #D0D758;
 		width: auto;
