@@ -80,7 +80,7 @@
 		margin: 0;
 		opacity: 0.6;
 	}
-	.nav-link:hover > .link-text {
+	.nav-link:hover > .link-text, .selected {
 		opacity: 1;
 		transition: all 0.3s;
 		font-size: 16px;
@@ -120,7 +120,10 @@
 	
 	/*===== General Styles ======*/
 	html {max-height: 100%;}
-	body {overflow-x: hidden; background: black; position: relative;}
+	body {
+		overflow-x: hidden;
+		background: black; position: relative;
+	}
 	
 	.wrapper {
 		width: 100%;
@@ -390,7 +393,10 @@
 	}
 	
 	/*===== General Styles ======*/
-	body {overflow-x: hidden; background: black;}
+	body {
+		overflow-x: hidden;
+		background: black;
+	}
 	
 	.wrapper {
 		width: 100%;
