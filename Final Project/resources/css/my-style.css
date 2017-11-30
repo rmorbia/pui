@@ -2,8 +2,13 @@
 @import url('https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i');
 /* CSS Document */
 
-/* Mobile Screen Size */
-@media only screen and (min-width: 1px) {
+/* Desktop Screen Size */
+@media only screen and (min-width: 1200px) {
+
+/* ========== Brakpoint larger than 1200px ========== */
+	
+	/*===== Bootstrap Changes ======*/
+	.row {position: relative;}
 	
 	/*===== Font ======*/
 	a:link, a:visited, a:hover, a:active {
@@ -13,122 +18,133 @@
 	h2, h3, h4, p {font-family: Lato, sans-serif;}
 	h1 {
 		font-family: "Arial Narrow", sans-serif;
-		font-size: 30px;
+		font-size: 100px;
 		font-weight: 700;
 	}
 	h2 {
-		font-size: 18px;
+		font-size: 60px;
 		font-weight: 400;
+		line-height: 1.5;
 	}
 	h3 {
-		font-size: 16px;
+		font-size: 50px;
 		font-weight: 700;
 		color: white;
 	}
 	h4 {
-		font-size: 14px;
+		font-size: 20px;
 		font-weight: 700;
 	}
 	p {
-		font-size: 12px;
-		line-height: 20px;;
+		font-size: 24px;
+		line-height: 40px;;
 		font-weight: 300;
-		margin-top: 16px;
+		margin-top: 30px;
 		color: #c6c6c6;
 	}
 	
 	/*===== Nav ======*/
-	#menu-button {
-		background: white;
-		width: 15vw;
-		max-width: 80px;
-		height: 15vw;
-		max-height: 80px;
-		box-shadow: 2px 2px 8px #333;
-		text-align: center;
-		border-radius: 50%;
+	.nav-panel {
+		all: initial;
+		width: auto;
+		height: 30vh;
+		background: none;
+		box-shadow: none;
 		position: fixed;
-		bottom: 20px; right: 20px;
-		z-index: 98;
-	}
-	.menu-icon {
-		font-size: 6vw;
-		color: #de4e2b;
-		position: relative;
-		top: 50%;
-		-webkit-transform: translateY(-50%); 
-		transform: translateY(-50%); 
-	}
-.nav-panel {
-		position: fixed;
-		bottom: -400px; left: 0;
-		text-align: center;
-		background: white;
-		width: 100%;
-		height: auto;
-		box-shadow: 0 0 30px #666;
+		top: 30vh; right: 100px;
+		text-align: right;
 		z-index: 99;
-		visibility: visible;
 	}
-	
 	.nav-panel li {
 		display: block;
 	}
-	.nav-dial {display: none;}
 	ul {
 		list-style-type: none;
-		margin: 0;
-		padding: 0;
 	}
 	.nav-link {
 		position: relative;
+		opacity: 0.6;
 	}
 	.nav-link:hover {
 		opacity: 1;
+		font-size: 16pc;
 	}
 	.link-text {
+		width: initial;
 		font-family: Lato, sans-serif;
 		font-size: 12px;
 		font-weight: 900;
-		line-height: 60px;
+		line-height: 6vh;
 		color: #de4e2b;
-		text-shadow: none;
+		text-shadow: 0 0 2px black;
 		margin: 0;
-		padding: 0 20px;
+		opacity: 0.6;
 	}
 	.nav-link:hover > .link-text {
 		opacity: 1;
 		transition: all 0.3s;
+		font-size: 16px;
+	}
+	.nav-panel:hover > .nav-dial {
+		opacity: 0.5;
+		transition: all 0.3s;
+	}
+	.nav-point {
+		position: absolute;
+		top: -3vh; right: -50px;
+		width: 20px;
+    	height: 20px;
+		background: white;
+    	-webkit-transform: translateX(-50%) translateY(-50%) scale(1);
+    	transform: translateX(-50%) translateY(-50%) scale(1);
+    	border-radius: 50%;
+		box-shadow: 1px 1px 4px #999;
+		visibility: hidden;
+	}
+	.nav-dial {
+		display: block;
+		color: white;
+		font-size: 14vh;
+		opacity: 0.3;
+		position: absolute;
+		top: 8vh; right: calc(-7vh - 100px);
+	}
+	.outer-most-link {
+		position: relative;
+		left: 80px;
+	}
+	.outer-link {
+		position: relative;
+		left: 40px;
 	}
 	
 	/*===== General Styles ======*/
-	body {
-		overflow-x: hidden;
-		background: black;
-	}
+	html {max-height: 100%;}
+	body {overflow-x: hidden; background: black; position: relative;}
+	
 	.wrapper {
 		width: 100%;
+		max-width: 1366px;
 		margin: 0 auto;
-		padding: 0 20px;
+		padding: 0 40px;
 		position: relative;
 	}
 
 	.full-width-img {
 		width: 100vw;
-		height: 30vh;
+		height: 100vh;
 		background-size: cover;
+		background-repeat: no-repeat;
 		position: relative;
 	}
 	
 	/*===== Intro ======*/
 	.hero-panel {
 		background-image: url("../img/mars-hero.jpg");
-		background-position: 18% 50%;
 		text-align: center;
-		height: 40vh;
 	}
 	.home-chevron {
-		font-size: 40px;
+		font-size: 80px;
 		color: white;
 		position: relative;
 		top: 80vh;
@@ -141,11 +157,12 @@
 		100% {position: relative; top: 80vh; opacity: 0;}
 	}
 	
-	.mars-vehicle {background-image: url("../img/mars-vehicle.jpg"); background-position: center center;}
+	.mars-vehicle {
+		background-image: url("../img/mars-vehicle.jpg");
+		text-align: center;
+	}
 	.nasa-developing {
-		padding-top: 20px;
-		margin-left: -15px;
-		margin-right: -15px;
+		margin-top: 40vh;
 		color: #C47509;
 		text-shadow: 0px 0px 1px black;
 	}
@@ -153,10 +170,9 @@
 	.journey-to-mars {
 		background-image: url("../img/journey-to-mars-wide.jpg");
 		background-position: center center;
-		background-repeat: no-repeat;
+		background-size: cover;
 		width: 100vw;
 		height: 50vw;
-		background-size: cover;
 	}
 	
 	/*===== Challenges ======*/
@@ -164,49 +180,48 @@
 	.title-challenges {
 		color: #D0D758;
 		position: absolute;
-		top: 10vh; left: 20px;
-		text-shadow: 1px 1px 6px #666;
+		top: 50vh; left: 40px;
+		text-shadow: 3px 3px 10px #666;
 	}
 	
-	
-	.new-section {
-		margin-top: 40px;
-	}
 	.section-pad{
-		padding: 30px 0;
+		padding: 80px 0;
 	}
 	.text-half {
-		padding: 0;
+		padding: 0 50px 0 0;
+		position: relative;
 	}
 	.image-half {
 		max-width: 100%;
-		margin-top: 0;
+		margin-top: 100px;
 		background-size: cover;
+		position: relative;
 	}
 	
 	.logistics-img {
 		background-image: url("../img/mission-art.jpg");
 		background-position: 70% 50%;
-		height: 200px;
+		height: 760px;
 	}
 	.physical-img {
 		background-image: url("../img/chart.png");
-		background-size: contain;
-		background-position: left center;
 		background-repeat: no-repeat;
-		float: none;
+		float: right;
 		width: 633px;
-		height: 200px;
-		margin: 0;
+		height: 715px;
+		margin: 120px 0 50px 50px;
 	}
 	.protection-img {
 		background-image: url("../img/mars-rover.jpg");
 		background-position: 50% 50%;
-		height: 200px;
+		height: 730px;
 	}
 	
 	/*===== Mission Proposals ======*/
-	.proposals-image {background-image: url("../img/rocket.jpg");}
+	.proposals-image {
+		background-image: url("../img/rocket.jpg");
+		background-size: 120%;
+	}
 	.title-mission, .title-proposals {
 		color: #D0D758;
 		width: auto;
@@ -214,29 +229,39 @@
 	}
 	.title-mission {
 		position: absolute;
-		top: 6vh; left: 20vw;
+		top: 20vh; left: 35vw;
 		text-shadow: 3px 3px 10px #666;
 	}
 	.title-proposals {
 		position: absolute;
-		top: 10vh; left: 57vw;
+		top: 35vh; left: 57vw;
 		text-shadow: 3px 3px 10px #666;
 	}
 	
 	.dstransport-img {
 		background-image: url("../img/nasa-lab.jpg");
 		background-position: 30% center;
-		margin-top: 0;
-		height: 200px;
+		margin-top: 150px;
+		height: 780px;
 	}
 	
 	.tech-challenges-image {
 		background-image: url("../img/nasa-tech-home.jpg");
+		overflow: hidden;
+	}
+	.tech-ch-img {
+		margin: 0 auto;
+		margin-top: -1vh;
+		min-width: 100vw;
+		min-height: 100vh;
+		-webkit-transform: translateY(-0%) scale(1.3);
+    	transform: translateY(-0%) scale(1.3);
+		z-index: 0;
 	}
 	.title-tech-challenges {
 		color: #D0D758;
 		position: absolute;
-		top: 10vh; left: 20px;
+		top: 50vh; left: 40px;
 		text-shadow: 3px 3px 10px #666;
 	}
 	
@@ -245,36 +270,40 @@
 		box-sizing: border-box;
 		background-image: url("../img/terrain-and-orbit.jpg");
 		background-size: cover;
-		background-position: 25% center;
-		height: auto;
+		background-position: 20% center;
+		height: 2254px;
 		padding: 0;
 	}
 	.dummy-img {
-		display: none;
+		position: absolute;
+		top: 0; left: 0;
+		max-height: 2254px;
+		width: auto;
+		opacity: 0;
 	}
 	.text-innovation {
-		margin: 40px auto 30px auto;
-		text-shadow: 0 0 6px black;
-		position: relative;
+		margin: 150px auto 30px auto;
 	}
 	
 	/*===== Resources ======*/
 	.resources {
 		text-align: center;
-		margin-top: 100px;
+		vertical-align: bottom;
+		margin-top: 200px;
 		margin-bottom: 30px;
 		color: white;
+		position: relative;
 	}
 	.resource-links {
-		font-size: 10px;
-		line-height: 16px;
+		font-size: 14px;
+		line-height: 22px;
 		margin: 0;
 	}
 
 }
 
 /* Tablet and Laptop Screen Sizes */
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 768px) and (max-width: 1199px) {
 	
 	/*===== Bootstrap Changes ======*/
 	.row {
@@ -384,16 +413,13 @@
 		height: 500px;
 		text-align: center;
 	}
-	.home-chevron {
-		font-size: 80px;
-		color: white;
-		position: relative;
-		top: 80vh;
-	}
 	
-	.mars-vehicle {background-image: url("../img/mars-vehicle.jpg"); background-position: center center;}
+	.mars-vehicle {
+		background-image: url("../img/mars-vehicle.jpg"); background-position: center center;
+		text-align: center;
+	}
 	.nasa-developing {
-		padding-top: 40px;
+		padding-top: 75px;
 		color: #C47509;
 		text-shadow: 0px 0px 1px black;
 	}
@@ -437,6 +463,7 @@
 	}
 	.physical-img {
 		background-image: url("../img/chart.png");
+		background-repeat: no-repeat;
 		background-size: contain;
 		float: none;
 		width: auto;
@@ -476,6 +503,10 @@
 	
 	.tech-challenges-image {
 		background-image: url("../img/nasa-tech-home.jpg");
+		overflow: hidden;
+	}
+	.tech-ch-img {
+		margin-top: -10vh;
 	}
 	.title-tech-challenges {
 		color: #D0D758;
@@ -515,13 +546,8 @@
 
 }
 
-/* Desktop Screen Size */
-@media only screen and (min-width: 1200px) {
-
-/* ========== Brakpoint larger than 1200px ========== */
-	
-	/*===== Bootstrap Changes ======*/
-	.row {position: relative;}
+/* Mobile Screen Size */
+@media only screen and (min-width: 1px) and (max-width: 767px) {
 	
 	/*===== Font ======*/
 	a:link, a:visited, a:hover, a:active {
@@ -531,141 +557,126 @@
 	h2, h3, h4, p {font-family: Lato, sans-serif;}
 	h1 {
 		font-family: "Arial Narrow", sans-serif;
-		font-size: 100px;
+		font-size: 30px;
 		font-weight: 700;
 	}
 	h2 {
-		font-size: 60px;
+		font-size: 18px;
 		font-weight: 400;
 	}
 	h3 {
-		font-size: 50px;
+		font-size: 16px;
 		font-weight: 700;
 		color: white;
 	}
 	h4 {
-		font-size: 20px;
+		font-size: 14px;
 		font-weight: 700;
 	}
 	p {
-		font-size: 24px;
-		line-height: 40px;;
+		font-size: 12px;
+		line-height: 20px;;
 		font-weight: 300;
-		margin-top: 30px;
+		margin-top: 16px;
 		color: #c6c6c6;
 	}
 	
 	/*===== Nav ======*/
-	.nav-panel {
-		all: initial;
-		width: auto;
-		height: 30vh;
-		background: none;
-		box-shadow: none;
+	#menu-button {
+		background: white;
+		width: 15vw;
+		max-width: 80px;
+		height: 15vw;
+		max-height: 80px;
+		box-shadow: 2px 2px 8px #333;
+		text-align: center;
+		border-radius: 50%;
 		position: fixed;
-		top: 30vh; right: 100px;
-		text-align: right;
-		z-index: 99;
+		bottom: 20px; right: 20px;
+		z-index: 98;
 	}
+	.menu-icon {
+		font-size: 6vw;
+		color: #de4e2b;
+		position: relative;
+		top: 50%;
+		-webkit-transform: translateY(-50%); 
+		transform: translateY(-50%); 
+	}
+.nav-panel {
+		position: fixed;
+		bottom: -400px; left: 0;
+		text-align: center;
+		background: white;
+		width: 100%;
+		height: auto;
+		box-shadow: 0 0 30px #666;
+		z-index: 99;
+		visibility: visible;
+	}
+	
 	.nav-panel li {
 		display: block;
 	}
+	.nav-dial {display: none;}
 	ul {
 		list-style-type: none;
+		margin: 0;
+		padding: 0;
 	}
 	.nav-link {
 		position: relative;
-		opacity: 0.6;
-	}
-	.nav-link:hover {
-		opacity: 1;
-		font-size: 16pc;
 	}
 	.link-text {
-		width: initial;
 		font-family: Lato, sans-serif;
 		font-size: 12px;
 		font-weight: 900;
-		line-height: 6vh;
+		line-height: 60px;
 		color: #de4e2b;
-		text-shadow: 0 0 2px black;
+		text-shadow: none;
 		margin: 0;
-		opacity: 0.6;
+		padding: 0 20px;
+		opacity: 0.8;
 	}
-	.nav-link:hover > .link-text {
+	.link-text:active {
 		opacity: 1;
-		transition: all 0.3s;
-		font-size: 16px;
-	}
-	.nav-panel:hover > .nav-dial {
-		opacity: 1;
-		transition: all 0.3s;
-	}
-	.nav-point {
-		position: absolute;
-		top: -3vh; right: -50px;
-		width: 20px;
-    	height: 20px;
-		background: white;
-    	-webkit-transform: translateX(-50%) translateY(-50%) scale(1);
-    	transform: translateX(-50%) translateY(-50%) scale(1);
-    	border-radius: 50%;
-		box-shadow: 1px 1px 4px #999;
-		visibility: hidden;
-	}
-	.nav-dial {
-		display: block;
-		color: white;
-		font-size: 14vh;
-		opacity: 0.5;
-		position: absolute;
-		top: 8vh; right: calc(-7vh - 100px);
-	}
-	.outer-most-link {
-		position: relative;
-		left: 80px;
-	}
-	.outer-link {
-		position: relative;
-		left: 40px;
 	}
 	
 	/*===== General Styles ======*/
-	html {max-height: 100%;}
-	body {overflow-x: hidden; background: black; position: relative;}
-	
+	body {
+		overflow-x: hidden;
+		background: black;
+	}
 	.wrapper {
 		width: 100%;
-		max-width: 1366px;
 		margin: 0 auto;
-		padding: 0 40px;
+		padding: 0 20px;
 		position: relative;
 	}
 
 	.full-width-img {
-		width: 100vw;
-		height: 100vh;
-		background-size: cover;
+		background-color: black;
 		background-repeat: no-repeat;
+		width: 100vw;
+		height: 30vh;
+		background-size: cover;
 		position: relative;
 	}
 	
 	/*===== Intro ======*/
 	.hero-panel {
 		background-image: url("../img/mars-hero.jpg");
+		background-position: 18% 50%;
 		text-align: center;
-	}
-	.home-chevron {
-		font-size: 80px;
-		color: white;
-		position: relative;
-		top: 80vh;
+		height: 40vh;
 	}
 	
-	.mars-vehicle {background-image: url("../img/mars-vehicle.jpg");}
+	.mars-vehicle {background-image: url("../img/mars-vehicle.jpg"); background-position: center center;}
 	.nasa-developing {
 		text-align: center;
-		margin-top: 40vh;
+		padding-top: 50px;
+		margin-left: -15px;
+		margin-right: -15px;
 		color: #C47509;
 		text-shadow: 0px 0px 1px black;
 	}
@@ -673,9 +684,10 @@
 	.journey-to-mars {
 		background-image: url("../img/journey-to-mars-wide.jpg");
 		background-position: center center;
-		background-size: cover;
+		background-repeat: no-repeat;
 		width: 100vw;
 		height: 50vw;
+		background-size: cover;
 	}
 	
 	/*===== Challenges ======*/
@@ -683,47 +695,49 @@
 	.title-challenges {
 		color: #D0D758;
 		position: absolute;
-		top: 50vh; left: 40px;
-		text-shadow: 3px 3px 10px #666;
+		top: 10vh; left: 20px;
+		text-shadow: 1px 1px 6px #666;
 	}
 	
+	
+	.new-section {
+		margin-top: 40px;
+	}
 	.section-pad{
-		padding: 80px 0;
+		padding: 30px 0;
 	}
 	.text-half {
-		padding: 0 50px 0 0;
-		position: relative;
+		padding: 0;
 	}
 	.image-half {
 		max-width: 100%;
-		margin-top: 100px;
+		margin-top: 0;
 		background-size: cover;
-		position: relative;
 	}
 	
 	.logistics-img {
 		background-image: url("../img/mission-art.jpg");
 		background-position: 70% 50%;
-		height: 760px;
+		height: 200px;
 	}
 	.physical-img {
 		background-image: url("../img/chart.png");
-		float: right;
+		background-repeat: no-repeat;
+		background-size: contain;
+		background-position: left center;
+		float: none;
 		width: 633px;
-		height: 715px;
-		margin: 120px 0 50px 50px;
+		height: 200px;
+		margin: 0;
 	}
 	.protection-img {
 		background-image: url("../img/mars-rover.jpg");
-		background-position: 50% 50%;
-		height: 730px;
+		background-position: 50% 10%;
+		height: 200px;
 	}
 	
 	/*===== Mission Proposals ======*/
-	.proposals-image {
-		background-image: url("../img/rocket.jpg");
-		background-size: 120%;
-	}
+	.proposals-image {background-image: url("../img/rocket.jpg");}
 	.title-mission, .title-proposals {
 		color: #D0D758;
 		width: auto;
@@ -731,39 +745,33 @@
 	}
 	.title-mission {
 		position: absolute;
-		top: 20vh; left: 35vw;
+		top: 6vh; left: 20vw;
 		text-shadow: 3px 3px 10px #666;
 	}
 	.title-proposals {
 		position: absolute;
-		top: 35vh; left: 57vw;
+		top: 10vh; left: 57vw;
 		text-shadow: 3px 3px 10px #666;
 	}
 	
 	.dstransport-img {
 		background-image: url("../img/nasa-lab.jpg");
 		background-position: 30% center;
-		margin-top: 150px;
-		height: 780px;
+		margin-top: 0;
+		height: 200px;
 	}
 	
 	.tech-challenges-image {
 		background-image: url("../img/nasa-tech-home.jpg");
-		overflow: hidden;
+		overflow:hidden;
 	}
 	.tech-ch-img {
-		margin: 0 auto;
-		margin-top: -80px;
-		min-width: 100vw;
-		min-height: 100vh;
-		-webkit-transform: translateY(-0%) scale(1.3);
-    	transform: translateY(-0%) scale(1.3);
-		z-index: 0;
+		margin-top: -10vh;
 	}
 	.title-tech-challenges {
 		color: #D0D758;
 		position: absolute;
-		top: 50vh; left: 40px;
+		top: 10vh; left: 20px;
 		text-shadow: 3px 3px 10px #666;
 	}
 	
@@ -772,36 +780,33 @@
 		box-sizing: border-box;
 		background-image: url("../img/terrain-and-orbit.jpg");
 		background-size: cover;
-		background-position: 20% center;
-		height: 2254px;
+		background-position: 25% center;
+		height: auto;
 		padding: 0;
 	}
 	.dummy-img {
-		position: absolute;
-		top: 0; left: 0;
-		max-height: 2254px;
-		width: auto;
-		opacity: 0;
+		display: none;
 	}
 	.text-innovation {
-		margin: 150px auto 30px auto;
+		margin: 40px auto 30px auto;
+		text-shadow: 0 0 6px black;
+		position: relative;
 	}
 	
 	/*===== Resources ======*/
 	.resources {
 		text-align: center;
-		vertical-align: bottom;
-		margin-top: 200px;
+		margin-top: 100px;
 		margin-bottom: 30px;
 		color: white;
-		position: relative;
 	}
 	.resource-links {
-		font-size: 14px;
-		line-height: 22px;
+		font-size: 10px;
+		line-height: 16px;
 		margin: 0;
 	}
 
 }
+
 
 
