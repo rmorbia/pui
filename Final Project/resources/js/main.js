@@ -53,11 +53,6 @@ $(document).ready( function() {
 		}
     });
 	
-	if($(window.width < 1159px)) {
-		$(this).attr('name').replace('rules\[0\]','rules\[$count\]')
-//		$(".logistics-img").attr("data-bottom-top") = ;
-	}
-	
 	// Initiates Skrollr //////////
 	( function( $ ) {
 		// Init Skrollr
@@ -72,5 +67,6 @@ $(document).ready( function() {
 			}
 		});
 	} )( jQuery );
+	
 	
 });
