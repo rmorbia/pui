@@ -9,7 +9,7 @@ $(document).ready( function() {
 	
 	$('#link-home').click( function() {
 		$('html, body').animate({
-			 scrollTop: $('#home').offset().top}, (Math.abs((scrollPos-$("#journey").offset().top))*400/1000), 'swing');
+			 scrollTop: $('#home').offset().top}, (Math.abs((scrollPos-$("#journey").offset().top))*500/1000), 'swing');
 	});
 
 	$('#link-journey').click( function() {
@@ -29,10 +29,11 @@ $(document).ready( function() {
 
 	$('#link-tech-challenges').click( function() {
 		 $('html, body').animate({
-			  scrollTop: $('#tech-challenges').offset().top}, (Math.abs((scrollPos-$("#tech-challenges").offset().top))*200/1000), 'swing');
+			  scrollTop: $('#tech-challenges').offset().top}, (Math.abs((scrollPos-
+			  $("#tech-challenges").offset().top))*200/1000), 'swing');
 	});
 	
-	// Mobile Menu Button //////////
+	// Mobile Menu Button - expands and colapses //////////
 	$("#menu-button").attr("state", "notOpen");
 	$("#menu-button").click( function(){
 		if( $("#menu-button").attr("state") === "notOpen" ) {
@@ -52,10 +53,19 @@ $(document).ready( function() {
 		}
     });
 	
-	// Initiate Skrollr //////////
+	if($(window.width < 1159px)) {
+		$(this).attr('name').replace('rules\[0\]','rules\[$count\]')
+//		$(".logistics-img").attr("data-bottom-top") = ;
+	}
+	
+	// Initiates Skrollr //////////
 	( function( $ ) {
 		// Init Skrollr
 		var s = skrollr.init({
+			/*Tried to used below line of code to get rid of 
+			white space at the bottom but it breaks the functionality*/
+			//forceHeight: false;
+			
 			render: function(data) {
 				//Debugging - Log the current scroll position.
 				//console.log(data.curTop);
