@@ -413,6 +413,9 @@
 		height: 500px;
 		text-align: center;
 	}
+	.home-chevron {
+		display: none;
+	}
 	
 	.mars-vehicle {
 		background-image: url("../img/mars-vehicle.jpg"); background-position: center center;
@@ -437,7 +440,7 @@
 	.title-challenges {
 		color: #D0D758;
 		position: absolute;
-		top: 20vh; left: 30px;
+		top: 15vh; left: 30px;
 		text-shadow: 3px 3px 10px #666;
 	}
 	
@@ -669,6 +672,9 @@
 		background-position: 18% 50%;
 		text-align: center;
 		height: 40vh;
+	}
+	.home-chevron {
+		display: none;
 	}
 	
 	.mars-vehicle {background-image: url("../img/mars-vehicle.jpg"); background-position: center center;}

@@ -82,22 +82,22 @@ $(document).ready( function() {
 		$(".logistics-img").attr('data-bottom-top', 'opacity:0; left:100%; top:100px;');
 		$(".logistics-img").attr('data-center-top','opacity:1; left:0%; top:20px;');
 		$("#logistics-text").attr('data-bottom-top', 'opacity:0; left:-100%; top:100px;');
-		$("#logistics-text").attr('data-center-top', 'opacity:1; left:0%; top:50%; top:0px;');
+		$("#logistics-text").attr('data-center-top', 'opacity:1; left:0%; top:50%; top:40px;');
 		
-		$("#physical-text").attr('data-bottom-top', 'opacity:0; left:-100%;');
-		$("#physical-text").attr('data-center-top', 'opacity:1; left:0;');
+		$("#physical-text").attr('data-bottom-top', 'opacity:0; left:-100%; top: 100px;');
+		$("#physical-text").attr('data-center-top', 'opacity:1; left:0; top: 40px;');
 		$(".physical-img").attr('data-bottom-top', 'opacity:0; left:100%; top:100px;');
 		$(".physical-img").attr('data-center-top','opacity:1; left:0%; top:0px;');
 		
 		$(".protection-img").attr('data-bottom-top', 'opacity:0; left:100%; top:100px;');
 		$(".protection-img").attr('data-center-top','opacity:1; left:0%; top:0px;');
 		$("#protection-text").attr('data-bottom-top', 'opacity:0; left:-100%; top:100px;');
-		$("#protection-text").attr('data-center-top', 'opacity:1; left:0%; top:0px;');
+		$("#protection-text").attr('data-center-top', 'opacity:1; left:0%; top:20px;');
 		
 		$(".dstransport-img").attr('data-bottom-top', 'opacity:0; left:100%; top:100px;');
 		$(".dstransport-img").attr('data-center-top','opacity:1; left:0%; top:20px;');
 		$("#dstransport-text").attr('data-bottom-top', 'opacity:0; left:-100%; top:100px;');
-		$("#dstransport-text").attr('data-center-top', 'opacity:1; left:0%; top:20px;');
+		$("#dstransport-text").attr('data-center-top', 'opacity:1; left:0%; top:40px;');
 		
 		$(".text-innovation").attr('data-bottom-top', 'opacity:0; left:-100%; top:100px;');
 		$(".text-innovation").attr('data-center-top', 'opacity:1; left:0%; top:20px;');
